@@ -1,0 +1,100 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://aws.amazon.com/systems-manager/schemas/parameter",
+  "title": "Parameter",
+  "description": "Schema for an Amazon Systems Manager Parameter Store parameter, representing a configuration value stored securely for use across AWS services and applications.",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "type": "string",
+      "description": "The fully qualified name of the parameter, including the hierarchy path.",
+      "maxLength": 2048,
+      "pattern": "^[a-zA-Z0-9_./\\-]+$"
+    },
+    "Type": {
+      "type": "string",
+      "description": "The type of parameter.",
+      "enum": ["String", "StringList", "SecureString"]
+    },
+    "Value": {
+      "type": "string",
+      "description": "The parameter value. For StringList, values are comma-separated. For SecureString, the value is encrypted.",
+      "maxLength": 4096
+    },
+    "Version": {
+      "type": "integer",
+      "description": "The parameter version number.",
+      "minimum": 1
+    },
+    "ARN": {
+      "type": "string",
+      "description": "The Amazon Resource Name (ARN) of the parameter.",
+      "pattern": "^arn:aws[a-zA-Z-]*:ssm:[a-z]{2}-[a-z]+-\\d:\\d{12}:parameter/.+$"
+    },
+    "LastModifiedDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date the parameter was last changed or updated."
+    },
+    "LastModifiedUser": {
+      "type": "string",
+      "description": "The ARN of the user or role that last changed the parameter."
+    },
+    "Description": {
+      "type": "string",
+      "description": "Information about the parameter.",
+      "maxLength": 1024
+    },
+    "AllowedPattern": {
+      "type": "string",
+      "description": "A regular expression used to validate the parameter value.",
+      "maxLength": 1024
+    },
+    "KeyId": {
+      "type": "string",
+      "description": "The ID of the query key used for encrypting SecureString parameter values.",
+      "maxLength": 256
+    },
+    "Tier": {
+      "type": "string",
+      "description": "The parameter tier.",
+      "enum": ["Standard", "Advanced", "Intelligent-Tiering"]
+    },
+    "DataType": {
+      "type": "string",
+      "description": "The data type of the parameter, such as text or aws:ec2:image.",
+      "enum": ["text", "aws:ec2:image", "aws:ssm:integration"]
+    },
+    "Policies": {
+      "type": "array",
+      "description": "A list of policies associated with the parameter.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "PolicyText": {
+            "type": "string",
+            "description": "The JSON text of the policy."
+          },
+          "PolicyType": {
+            "type": "string",
+            "description": "The type of policy.",
+            "enum": ["Expiration", "ExpirationNotification", "NoChangeNotification"]
+          },
+          "PolicyStatus": {
+            "type": "string",
+            "description": "The status of the policy."
+          }
+        }
+      }
+    },
+    "Selector": {
+      "type": "string",
+      "description": "Either the version number or the label used to retrieve the parameter value."
+    },
+    "SourceResult": {
+      "type": "string",
+      "description": "Applies to parameters that reference information in other AWS services."
+    }
+  },
+  "required": ["Name", "Type", "Value", "Version"]
+}

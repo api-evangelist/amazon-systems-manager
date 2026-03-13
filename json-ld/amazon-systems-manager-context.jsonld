@@ -1,0 +1,66 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "aws": "https://aws.amazon.com/systems-manager/schemas/",
+    "ssm": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/",
+    "Parameter": {
+      "@id": "aws:Parameter",
+      "@context": {
+        "Name": "schema:name",
+        "Type": "schema:additionalType",
+        "Value": "schema:value",
+        "Version": "schema:version",
+        "ARN": "aws:arn",
+        "Description": "schema:description",
+        "LastModifiedDate": "schema:dateModified",
+        "LastModifiedUser": "aws:lastModifiedUser",
+        "KeyId": "aws:keyId",
+        "Tier": "aws:tier",
+        "DataType": "aws:dataType"
+      }
+    },
+    "Command": {
+      "@id": "aws:Command",
+      "@context": {
+        "CommandId": "schema:identifier",
+        "DocumentName": "schema:name",
+        "Status": "aws:commandStatus",
+        "InstanceIds": "aws:instanceIds",
+        "Parameters": "aws:parameters",
+        "RequestedDateTime": "schema:dateCreated",
+        "Comment": "schema:description"
+      }
+    },
+    "Document": {
+      "@id": "aws:Document",
+      "@context": {
+        "Name": "schema:name",
+        "DocumentType": "schema:additionalType",
+        "DocumentFormat": "schema:encodingFormat",
+        "Content": "schema:text",
+        "Status": "aws:documentStatus",
+        "DocumentVersion": "schema:version"
+      }
+    },
+    "AutomationExecution": {
+      "@id": "aws:AutomationExecution",
+      "@context": {
+        "AutomationExecutionId": "schema:identifier",
+        "DocumentName": "schema:name",
+        "Mode": "aws:executionMode",
+        "Status": "aws:executionStatus",
+        "Parameters": "aws:parameters"
+      }
+    },
+    "InstanceInformation": {
+      "@id": "aws:InstanceInformation",
+      "@context": {
+        "InstanceId": "schema:identifier",
+        "PingStatus": "aws:pingStatus",
+        "PlatformType": "schema:operatingSystem",
+        "PlatformName": "schema:name",
+        "AgentVersion": "schema:softwareVersion"
+      }
+    }
+  }
+}

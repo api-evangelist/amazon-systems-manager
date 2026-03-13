@@ -1,0 +1,429 @@
+openapi: 3.0.0
+info:
+  title: Amazon Systems Manager
+  description: Amazon Systems Manager is a management service that provides a unified interface for managing AWS resources, including parameter management, command execution, document management, and automation.
+  version: '2014-11-06'
+  contact:
+    name: Kin Lane
+    email: kin@apievangelist.com
+    url: https://aws.amazon.com/systems-manager/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+servers:
+  - url: https://ssm.amazonaws.com
+    description: Amazon Systems Manager API endpoint
+paths:
+  /:
+    post:
+      operationId: SendCommand
+      summary: Send Command
+      description: Runs commands on one or more managed instances, allowing you to execute scripts or commands remotely.
+      headers:
+        X-Amz-Target:
+          description: The target API operation.
+          schema:
+            type: string
+            enum:
+              - AmazonSSM.SendCommand
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              properties:
+                DocumentName:
+                  type: string
+                  description: The name of the SSM document to run.
+                InstanceIds:
+                  type: array
+                  description: The IDs of the instances where the command should run.
+                  items:
+                    type: string
+                Targets:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      Key:
+                        type: string
+                      Values:
+                        type: array
+                        items:
+                          type: string
+                Parameters:
+                  type: object
+                  additionalProperties:
+                    type: array
+                    items:
+                      type: string
+                Comment:
+                  type: string
+                TimeoutSeconds:
+                  type: integer
+              required:
+                - DocumentName
+      responses:
+        '200':
+          description: Command sent successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Command:
+                    type: object
+                    properties:
+                      CommandId:
+                        type: string
+                      DocumentName:
+                        type: string
+                      Status:
+                        type: string
+                      RequestedDateTime:
+                        type: string
+      tags:
+        - Run Command
+
+  /#ListCommands:
+    post:
+      operationId: ListCommands
+      summary: List Commands
+      description: Lists the commands requested by users of the AWS account.
+      requestBody:
+        required: false
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              properties:
+                CommandId:
+                  type: string
+                InstanceId:
+                  type: string
+                MaxResults:
+                  type: integer
+                NextToken:
+                  type: string
+                Filters:
+                  type: array
+                  items:
+                    type: object
+      responses:
+        '200':
+          description: List of commands.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Commands:
+                    type: array
+                    items:
+                      type: object
+                  NextToken:
+                    type: string
+      tags:
+        - Run Command
+
+  /#GetParameter:
+    post:
+      operationId: GetParameter
+      summary: Get Parameter
+      description: Get information about a single parameter by specifying the parameter name.
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              properties:
+                Name:
+                  type: string
+                  description: The name of the parameter to retrieve.
+                WithDecryption:
+                  type: boolean
+                  description: Return decrypted values for secure string parameters.
+              required:
+                - Name
+      responses:
+        '200':
+          description: Parameter details.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Parameter:
+                    $ref: '#/components/schemas/Parameter'
+      tags:
+        - Parameter Store
+
+  /#PutParameter:
+    post:
+      operationId: PutParameter
+      summary: Put Parameter
+      description: Add a parameter to the system or update an existing parameter.
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              properties:
+                Name:
+                  type: string
+                  description: The fully qualified name of the parameter.
+                Description:
+                  type: string
+                Value:
+                  type: string
+                  description: The parameter value.
+                Type:
+                  type: string
+                  enum:
+                    - String
+                    - StringList
+                    - SecureString
+                KeyId:
+                  type: string
+                  description: The KMS Key ID for SecureString parameters.
+                Overwrite:
+                  type: boolean
+                Tier:
+                  type: string
+                  enum:
+                    - Standard
+                    - Advanced
+                    - Intelligent-Tiering
+                Tags:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      Key:
+                        type: string
+                      Value:
+                        type: string
+              required:
+                - Name
+                - Value
+                - Type
+      responses:
+        '200':
+          description: Parameter stored successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Version:
+                    type: integer
+                  Tier:
+                    type: string
+      tags:
+        - Parameter Store
+
+  /#DescribeInstanceInformation:
+    post:
+      operationId: DescribeInstanceInformation
+      summary: Describe Instance Information
+      description: Describes one or more of your managed instances, including information about the operating system platform, SSM Agent version, and instance status.
+      requestBody:
+        required: false
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              properties:
+                InstanceInformationFilterList:
+                  type: array
+                  items:
+                    type: object
+                MaxResults:
+                  type: integer
+                NextToken:
+                  type: string
+      responses:
+        '200':
+          description: Instance information.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  InstanceInformationList:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        InstanceId:
+                          type: string
+                        PingStatus:
+                          type: string
+                        PlatformType:
+                          type: string
+                        PlatformName:
+                          type: string
+                        AgentVersion:
+                          type: string
+                  NextToken:
+                    type: string
+      tags:
+        - Managed Instances
+
+  /#CreateDocument:
+    post:
+      operationId: CreateDocument
+      summary: Create Document
+      description: Creates an SSM document that describes an instance configuration, which includes the commands to run on an instance.
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              properties:
+                Content:
+                  type: string
+                  description: The content for the new SSM document in JSON or YAML format.
+                Name:
+                  type: string
+                  description: A name for the SSM document.
+                DocumentType:
+                  type: string
+                  enum:
+                    - Command
+                    - Policy
+                    - Automation
+                    - Session
+                    - Package
+                DocumentFormat:
+                  type: string
+                  enum:
+                    - YAML
+                    - JSON
+                    - TEXT
+                Tags:
+                  type: array
+                  items:
+                    type: object
+              required:
+                - Content
+                - Name
+      responses:
+        '200':
+          description: Document created successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  DocumentDescription:
+                    type: object
+      tags:
+        - Documents
+
+  /#StartAutomationExecution:
+    post:
+      operationId: StartAutomationExecution
+      summary: Start Automation Execution
+      description: Initiates execution of an Automation runbook to perform operational tasks such as patching, updating AMIs, or managing configuration.
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              properties:
+                DocumentName:
+                  type: string
+                  description: The name of the SSM Automation runbook to run.
+                DocumentVersion:
+                  type: string
+                Parameters:
+                  type: object
+                  additionalProperties:
+                    type: array
+                    items:
+                      type: string
+                Mode:
+                  type: string
+                  enum:
+                    - Auto
+                    - Interactive
+                TargetLocations:
+                  type: array
+                  items:
+                    type: object
+              required:
+                - DocumentName
+      responses:
+        '200':
+          description: Automation execution started.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  AutomationExecutionId:
+                    type: string
+      tags:
+        - Automation
+
+components:
+  schemas:
+    Parameter:
+      type: object
+      description: An SSM Parameter Store parameter containing configuration data.
+      properties:
+        Name:
+          type: string
+          description: The name of the parameter.
+        Type:
+          type: string
+          description: The type of parameter.
+          enum:
+            - String
+            - StringList
+            - SecureString
+        Value:
+          type: string
+          description: The parameter value.
+        Version:
+          type: integer
+          description: The parameter version.
+        ARN:
+          type: string
+          description: The Amazon Resource Name (ARN) of the parameter.
+        LastModifiedDate:
+          type: string
+          format: date-time
+          description: Date the parameter was last changed or updated.
+        DataType:
+          type: string
+          description: The data type of the parameter.
+        Selector:
+          type: string
+          description: Either the version number or the label used to retrieve the parameter value.
+        SourceResult:
+          type: string
+          description: The raw result or response from the source.
+      required:
+        - Name
+        - Type
+        - Value
+        - Version
+
+tags:
+  - name: Run Command
+    description: Operations for running commands on managed instances.
+  - name: Parameter Store
+    description: Operations for managing parameters.
+  - name: Managed Instances
+    description: Operations for managing instance information.
+  - name: Documents
+    description: Operations for managing SSM documents.
+  - name: Automation
+    description: Operations for managing automation executions.
