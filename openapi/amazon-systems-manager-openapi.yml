@@ -17,7 +17,7 @@ paths:
   /:
     post:
       operationId: SendCommand
-      summary: Send Command
+      summary: Amazon Systems Manager Send Command
       description: Runs commands on one or more managed instances, allowing you to execute scripts or commands remotely.
       headers:
         X-Amz-Target:
@@ -89,7 +89,7 @@ paths:
   /#ListCommands:
     post:
       operationId: ListCommands
-      summary: List Commands
+      summary: Amazon Systems Manager List Commands
       description: Lists the commands requested by users of the AWS account.
       requestBody:
         required: false
@@ -130,7 +130,7 @@ paths:
   /#GetParameter:
     post:
       operationId: GetParameter
-      summary: Get Parameter
+      summary: Amazon Systems Manager Get Parameter
       description: Get information about a single parameter by specifying the parameter name.
       requestBody:
         required: true
@@ -163,7 +163,7 @@ paths:
   /#PutParameter:
     post:
       operationId: PutParameter
-      summary: Put Parameter
+      summary: Amazon Systems Manager Put Parameter
       description: Add a parameter to the system or update an existing parameter.
       requestBody:
         required: true
@@ -228,7 +228,7 @@ paths:
   /#DescribeInstanceInformation:
     post:
       operationId: DescribeInstanceInformation
-      summary: Describe Instance Information
+      summary: Amazon Systems Manager Describe Instance Information
       description: Describes one or more of your managed instances, including information about the operating system platform, SSM Agent version, and instance status.
       requestBody:
         required: false
@@ -276,7 +276,7 @@ paths:
   /#CreateDocument:
     post:
       operationId: CreateDocument
-      summary: Create Document
+      summary: Amazon Systems Manager Create Document
       description: Creates an SSM document that describes an instance configuration, which includes the commands to run on an instance.
       requestBody:
         required: true
@@ -328,7 +328,7 @@ paths:
   /#StartAutomationExecution:
     post:
       operationId: StartAutomationExecution
-      summary: Start Automation Execution
+      summary: Amazon Systems Manager Start Automation Execution
       description: Initiates execution of an Automation runbook to perform operational tasks such as patching, updating AMIs, or managing configuration.
       requestBody:
         required: true
