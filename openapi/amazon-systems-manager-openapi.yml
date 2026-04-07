@@ -417,13 +417,13 @@ components:
         - Version
 
 tags:
-  - name: Run Command
-    description: Operations for running commands on managed instances.
-  - name: Parameter Store
-    description: Operations for managing parameters.
-  - name: Managed Instances
-    description: Operations for managing instance information.
-  - name: Documents
-    description: Operations for managing SSM documents.
   - name: Automation
     description: Operations for managing automation executions.
+  - name: Documents
+    description: Operations for managing SSM documents.
+  - name: Managed Instances
+    description: Operations for managing instance information.
+  - name: Parameter Store
+    description: Operations for managing parameters.
+  - name: Run Command
+    description: Operations for running commands on managed instances.
