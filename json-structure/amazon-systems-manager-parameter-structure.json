@@ -1,0 +1,61 @@
+{
+  "name": "Parameter",
+  "description": "An SSM Parameter Store parameter containing configuration data.",
+  "type": "object",
+  "properties": [
+    {
+      "name": "Name",
+      "type": "string",
+      "description": "The name of the parameter.",
+      "required": true
+    },
+    {
+      "name": "Type",
+      "type": "string",
+      "description": "The type of parameter.",
+      "required": true
+    },
+    {
+      "name": "Value",
+      "type": "string",
+      "description": "The parameter value.",
+      "required": true
+    },
+    {
+      "name": "Version",
+      "type": "integer",
+      "description": "The parameter version.",
+      "required": true
+    },
+    {
+      "name": "ARN",
+      "type": "string",
+      "description": "The Amazon Resource Name (ARN) of the parameter.",
+      "required": false
+    },
+    {
+      "name": "LastModifiedDate",
+      "type": "string",
+      "description": "Date the parameter was last changed or updated.",
+      "required": false
+    },
+    {
+      "name": "DataType",
+      "type": "string",
+      "description": "The data type of the parameter.",
+      "required": false
+    },
+    {
+      "name": "Selector",
+      "type": "string",
+      "description": "Either the version number or the label used to retrieve the parameter value.",
+      "required": false
+    },
+    {
+      "name": "SourceResult",
+      "type": "string",
+      "description": "The raw result or response from the source.",
+      "required": false
+    }
+  ]
+}

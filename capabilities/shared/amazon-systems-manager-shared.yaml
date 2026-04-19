@@ -1,0 +1,33 @@
+id: amazon-systems-manager
+name: Amazon Systems Manager
+description: Shared capability definition for Amazon Systems Manager
+namespace: amazon-systems-manager
+operations:
+- operationId: SendCommand
+  method: POST
+  path: /
+  summary: Amazon Systems Manager Send Command
+- operationId: ListCommands
+  method: POST
+  path: /#ListCommands
+  summary: Amazon Systems Manager List Commands
+- operationId: GetParameter
+  method: POST
+  path: /#GetParameter
+  summary: Amazon Systems Manager Get Parameter
+- operationId: PutParameter
+  method: POST
+  path: /#PutParameter
+  summary: Amazon Systems Manager Put Parameter
+- operationId: DescribeInstanceInformation
+  method: POST
+  path: /#DescribeInstanceInformation
+  summary: Amazon Systems Manager Describe Instance Information
+- operationId: CreateDocument
+  method: POST
+  path: /#CreateDocument
+  summary: Amazon Systems Manager Create Document
+- operationId: StartAutomationExecution
+  method: POST
+  path: /#StartAutomationExecution
+  summary: Amazon Systems Manager Start Automation Execution

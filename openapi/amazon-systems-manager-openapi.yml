@@ -1,7 +1,8 @@
 openapi: 3.0.0
 info:
   title: Amazon Systems Manager
-  description: Amazon Systems Manager is a management service that provides a unified interface for managing AWS resources, including parameter management, command execution, document management, and automation.
+  description: Amazon Systems Manager is a management service that provides a unified interface for managing AWS resources, including parameter management, command execution, document management, and 
+    automation.
   version: '2014-11-06'
   contact:
     name: Kin Lane
@@ -11,8 +12,8 @@ info:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0
 servers:
-  - url: https://ssm.amazonaws.com
-    description: Amazon Systems Manager API endpoint
+- url: https://ssm.amazonaws.com
+  description: Amazon Systems Manager API endpoint
 paths:
   /:
     post:
@@ -25,7 +26,7 @@ paths:
           schema:
             type: string
             enum:
-              - AmazonSSM.SendCommand
+            - AmazonSSM.SendCommand
       requestBody:
         required: true
         content:
@@ -63,7 +64,7 @@ paths:
                 TimeoutSeconds:
                   type: integer
               required:
-                - DocumentName
+              - DocumentName
       responses:
         '200':
           description: Command sent successfully.
@@ -84,8 +85,11 @@ paths:
                       RequestedDateTime:
                         type: string
       tags:
-        - Run Command
+      - Run Command
 
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
   /#ListCommands:
     post:
       operationId: ListCommands
@@ -125,8 +129,11 @@ paths:
                   NextToken:
                     type: string
       tags:
-        - Run Command
+      - Run Command
 
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
   /#GetParameter:
     post:
       operationId: GetParameter
@@ -146,7 +153,7 @@ paths:
                   type: boolean
                   description: Return decrypted values for secure string parameters.
               required:
-                - Name
+              - Name
       responses:
         '200':
           description: Parameter details.
@@ -158,8 +165,11 @@ paths:
                   Parameter:
                     $ref: '#/components/schemas/Parameter'
       tags:
-        - Parameter Store
+      - Parameter Store
 
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
   /#PutParameter:
     post:
       operationId: PutParameter
@@ -183,9 +193,9 @@ paths:
                 Type:
                   type: string
                   enum:
-                    - String
-                    - StringList
-                    - SecureString
+                  - String
+                  - StringList
+                  - SecureString
                 KeyId:
                   type: string
                   description: The KMS Key ID for SecureString parameters.
@@ -194,9 +204,9 @@ paths:
                 Tier:
                   type: string
                   enum:
-                    - Standard
-                    - Advanced
-                    - Intelligent-Tiering
+                  - Standard
+                  - Advanced
+                  - Intelligent-Tiering
                 Tags:
                   type: array
                   items:
@@ -207,9 +217,9 @@ paths:
                       Value:
                         type: string
               required:
-                - Name
-                - Value
-                - Type
+              - Name
+              - Value
+              - Type
       responses:
         '200':
           description: Parameter stored successfully.
@@ -223,8 +233,11 @@ paths:
                   Tier:
                     type: string
       tags:
-        - Parameter Store
+      - Parameter Store
 
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
   /#DescribeInstanceInformation:
     post:
       operationId: DescribeInstanceInformation
@@ -271,8 +284,11 @@ paths:
                   NextToken:
                     type: string
       tags:
-        - Managed Instances
+      - Managed Instances
 
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
   /#CreateDocument:
     post:
       operationId: CreateDocument
@@ -294,24 +310,24 @@ paths:
                 DocumentType:
                   type: string
                   enum:
-                    - Command
-                    - Policy
-                    - Automation
-                    - Session
-                    - Package
+                  - Command
+                  - Policy
+                  - Automation
+                  - Session
+                  - Package
                 DocumentFormat:
                   type: string
                   enum:
-                    - YAML
-                    - JSON
-                    - TEXT
+                  - YAML
+                  - JSON
+                  - TEXT
                 Tags:
                   type: array
                   items:
                     type: object
               required:
-                - Content
-                - Name
+              - Content
+              - Name
       responses:
         '200':
           description: Document created successfully.
@@ -323,8 +339,11 @@ paths:
                   DocumentDescription:
                     type: object
       tags:
-        - Documents
+      - Documents
 
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
   /#StartAutomationExecution:
     post:
       operationId: StartAutomationExecution
@@ -351,14 +370,14 @@ paths:
                 Mode:
                   type: string
                   enum:
-                    - Auto
-                    - Interactive
+                  - Auto
+                  - Interactive
                 TargetLocations:
                   type: array
                   items:
                     type: object
               required:
-                - DocumentName
+              - DocumentName
       responses:
         '200':
           description: Automation execution started.
@@ -370,8 +389,11 @@ paths:
                   AutomationExecutionId:
                     type: string
       tags:
-        - Automation
+      - Automation
 
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
 components:
   schemas:
     Parameter:
@@ -385,9 +407,9 @@ components:
           type: string
           description: The type of parameter.
           enum:
-            - String
-            - StringList
-            - SecureString
+          - String
+          - StringList
+          - SecureString
         Value:
           type: string
           description: The parameter value.
@@ -411,19 +433,19 @@ components:
           type: string
           description: The raw result or response from the source.
       required:
-        - Name
-        - Type
-        - Value
-        - Version
+      - Name
+      - Type
+      - Value
+      - Version
 
 tags:
-  - name: Automation
-    description: Operations for managing automation executions.
-  - name: Documents
-    description: Operations for managing SSM documents.
-  - name: Managed Instances
-    description: Operations for managing instance information.
-  - name: Parameter Store
-    description: Operations for managing parameters.
-  - name: Run Command
-    description: Operations for running commands on managed instances.
+- name: Automation
+  description: Operations for managing automation executions.
+- name: Documents
+  description: Operations for managing SSM documents.
+- name: Managed Instances
+  description: Operations for managing instance information.
+- name: Parameter Store
+  description: Operations for managing parameters.
+- name: Run Command
+  description: Operations for running commands on managed instances.
