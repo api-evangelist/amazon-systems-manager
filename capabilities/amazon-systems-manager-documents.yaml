@@ -1,0 +1,77 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Amazon Systems Manager — Documents
+  description: 'Amazon Systems Manager — Documents. 1 operations. Lead operation: Amazon Systems Manager Create Document.
+    Self-contained Naftiko capability covering one Amazon Systems Manager business surface.'
+  tags:
+  - Amazon Systems Manager
+  - Documents
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    AMAZON_SYSTEMS_MANAGER_API_KEY: AMAZON_SYSTEMS_MANAGER_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: amazon-systems-manager-documents
+    baseUri: https://ssm.amazonaws.com
+    description: Amazon Systems Manager — Documents business capability. Self-contained, no shared references.
+    resources:
+    - name: '#CreateDocument'
+      path: /#CreateDocument
+      operations:
+      - name: createdocument
+        method: POST
+        description: Amazon Systems Manager Create Document
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+  exposes:
+  - type: rest
+    namespace: amazon-systems-manager-documents-rest
+    port: 8080
+    description: REST adapter for Amazon Systems Manager — Documents. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/createdocument
+      name: createdocument
+      description: 'REST surface for #CreateDocument.'
+      operations:
+      - method: POST
+        name: createdocument
+        description: Amazon Systems Manager Create Document
+        call: amazon-systems-manager-documents.createdocument
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: amazon-systems-manager-documents-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Amazon Systems Manager — Documents. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: amazon-systems-manager-create-document
+      description: Amazon Systems Manager Create Document
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-systems-manager-documents.createdocument
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.

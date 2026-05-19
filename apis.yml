@@ -1,18 +1,16 @@
 name: Amazon Systems Manager
-description: AWS Systems Manager is an operational management service that provides a unified interface for managing AWS resources and on-premises infrastructure. It enables automation of operational 
-  tasks, configuration management, patch management, parameter storage, and run command execution across your hybrid cloud environment at scale.
+description: AWS Systems Manager is an operational management service that provides a unified interface for managing AWS resources
+  and on-premises infrastructure. It enables automation of operational tasks, configuration management, patch management,
+  parameter storage, and run command execution across your hybrid cloud environment at scale.
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
 url: https://aws.amazon.com/systems-manager/
 created: '2024-01-15'
-modified: '2026-04-19'
+modified: '2026-05-19'
 apis:
 - name: AWS Systems Manager API
-  description: >-
-    The AWS Systems Manager API provides programmatic access to manage and
-    automate operational tasks across your AWS and on-premises infrastructure.
-    It enables developers to run commands on managed instances, manage
-    parameters and secrets, create automation documents, configure patch
-    baselines, manage inventory, and set up maintenance windows.
+  description: The AWS Systems Manager API provides programmatic access to manage and automate operational tasks across your
+    AWS and on-premises infrastructure. It enables developers to run commands on managed instances, manage parameters and
+    secrets, create automation documents, configure patch baselines, manage inventory, and set up maintenance windows.
   image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
   humanURL: https://aws.amazon.com/systems-manager/
   baseURL: https://ssm.amazonaws.com
@@ -32,6 +30,16 @@ apis:
     url: https://aws.amazon.com/systems-manager/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/systems-manager/faq/
+  - type: NaftikoCapability
+    url: capabilities/amazon-systems-manager-automation.yaml
+  - type: NaftikoCapability
+    url: capabilities/amazon-systems-manager-documents.yaml
+  - type: NaftikoCapability
+    url: capabilities/amazon-systems-manager-managed-instances.yaml
+  - type: NaftikoCapability
+    url: capabilities/amazon-systems-manager-parameter-store.yaml
+  - type: NaftikoCapability
+    url: capabilities/amazon-systems-manager-run-command.yaml
 common:
 - type: Portal
   url: https://aws.amazon.com/
@@ -61,8 +69,6 @@ common:
   url: https://raw.githubusercontent.com/api-evangelist/amazon-systems-manager/refs/heads/main/rules/amazon-systems-manager-spectral-rules.yml
 - type: Vocabulary
   url: https://raw.githubusercontent.com/api-evangelist/amazon-systems-manager/refs/heads/main/vocabulary/amazon-systems-manager-vocabulary.yaml
-- type: NaftikoCapability
-  url: https://raw.githubusercontent.com/api-evangelist/amazon-systems-manager/refs/heads/main/capabilities/amazon-systems-manager-capability.yaml
 - type: Features
   data:
   - name: Automation

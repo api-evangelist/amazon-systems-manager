@@ -1,7 +1,0 @@
-id: amazon-systems-manager-capability
-name: Amazon Systems Manager Capability
-description: Workflow-oriented capability for Amazon Systems Manager
-tags:
-- AWS
-consumes:
-- ref: capabilities/shared/amazon-systems-manager-shared.yaml
