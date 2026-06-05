@@ -1,6 +1,20 @@
-# Amazon Systems Manager
+# Amazon Systems Manager (amazon-systems-manager)
 
 AWS Systems Manager is an operational management service that provides a unified interface for managing AWS resources and on-premises infrastructure. It enables automation of operational tasks, configuration management, patch management, parameter storage, and run command execution across your hybrid cloud environment at scale.
+
+**APIs.json:** [https://aws.amazon.com/systems-manager/](https://aws.amazon.com/systems-manager/)
+
+## Tags
+
+- Automation
+- AWS
+- Management
+- Operations
+
+## Timestamps
+
+- **Created:** 2024-01-15
+- **Modified:** 2026-05-19
 
 ## APIs
 
@@ -8,57 +22,47 @@ AWS Systems Manager is an operational management service that provides a unified
 
 The AWS Systems Manager API provides programmatic access to manage and automate operational tasks across your AWS and on-premises infrastructure. It enables developers to run commands on managed instances, manage parameters and secrets, create automation documents, configure patch baselines, manage inventory, and set up maintenance windows.
 
-**Properties:**
+- **Human URL:** [https://aws.amazon.com/systems-manager/](https://aws.amazon.com/systems-manager/)
+- **Base URL:** `https://ssm.amazonaws.com`
 
-- **Documentation**: [https://docs.aws.amazon.com/systems-manager/](https://docs.aws.amazon.com/systems-manager/)
-- **OpenAPI**: [https://raw.githubusercontent.com/api-evangelist/amazon-systems-manager/refs/heads/main/openapi/amazon-systems-manager-openapi.yml](https://raw.githubusercontent.com/api-evangelist/amazon-systems-manager/refs/heads/main/openapi/amazon-systems-manager-openapi.yml)
-- **Pricing**: [https://aws.amazon.com/systems-manager/pricing/](https://aws.amazon.com/systems-manager/pricing/)
-- **GettingStarted**: [https://aws.amazon.com/systems-manager/getting-started/](https://aws.amazon.com/systems-manager/getting-started/)
-- **FAQ**: [https://aws.amazon.com/systems-manager/faq/](https://aws.amazon.com/systems-manager/faq/)
+#### Tags
+
+- Automation
+- AWS
+- Management
+- Operations
+
+#### Properties
+
+- [Documentation](https://docs.aws.amazon.com/systems-manager/)
+- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/amazon-systems-manager/refs/heads/main/openapi/amazon-systems-manager-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Pricing](https://aws.amazon.com/systems-manager/pricing/)
+- [Getting Started](https://aws.amazon.com/systems-manager/getting-started/)
+- [F A Q](https://aws.amazon.com/systems-manager/faq/)
+- [Postman Collection](collections/amazon-systems-manager.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/amazon-systems-manager.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
 ## Common Properties
 
-- **Portal**: [https://aws.amazon.com/](https://aws.amazon.com/)
-- **Website**: [https://aws.amazon.com/systems-manager/](https://aws.amazon.com/systems-manager/)
-- **Documentation**: [https://docs.aws.amazon.com/systems-manager/](https://docs.aws.amazon.com/systems-manager/)
-- **TermsOfService**: [https://aws.amazon.com/service-terms/](https://aws.amazon.com/service-terms/)
-- **PrivacyPolicy**: [https://aws.amazon.com/privacy/](https://aws.amazon.com/privacy/)
-- **Support**: [https://aws.amazon.com/premiumsupport/](https://aws.amazon.com/premiumsupport/)
-- **GitHubOrganization**: [https://github.com/aws](https://github.com/aws)
-- **Console**: [https://console.aws.amazon.com/systems-manager/](https://console.aws.amazon.com/systems-manager/)
-- **SignUp**: [https://signin.aws.amazon.com/signup?request_type=register](https://signin.aws.amazon.com/signup?request_type=register)
-- **Login**: [https://aws.amazon.com/console/](https://aws.amazon.com/console/)
-- **StatusPage**: [https://health.aws.amazon.com/health/status](https://health.aws.amazon.com/health/status)
-- **Contact**: [https://aws.amazon.com/contact-us/](https://aws.amazon.com/contact-us/)
-- **SpectralRules**: [https://raw.githubusercontent.com/api-evangelist/amazon-systems-manager/refs/heads/main/rules/amazon-systems-manager-spectral-rules.yml](https://raw.githubusercontent.com/api-evangelist/amazon-systems-manager/refs/heads/main/rules/amazon-systems-manager-spectral-rules.yml)
-- **Vocabulary**: [https://raw.githubusercontent.com/api-evangelist/amazon-systems-manager/refs/heads/main/vocabulary/amazon-systems-manager-vocabulary.yaml](https://raw.githubusercontent.com/api-evangelist/amazon-systems-manager/refs/heads/main/vocabulary/amazon-systems-manager-vocabulary.yaml)
-- **NaftikoCapability**: [https://raw.githubusercontent.com/api-evangelist/amazon-systems-manager/refs/heads/main/capabilities/amazon-systems-manager-capability.yaml](https://raw.githubusercontent.com/api-evangelist/amazon-systems-manager/refs/heads/main/capabilities/amazon-systems-manager-capability.yaml)
-- **Features**: 2 items
-- **UseCases**: 1 items
+- [Portal](https://aws.amazon.com/)
+- [Website](https://aws.amazon.com/systems-manager/)
+- [Documentation](https://docs.aws.amazon.com/systems-manager/)
+- [Terms of Service](https://aws.amazon.com/service-terms/)
+- [Privacy Policy](https://aws.amazon.com/privacy/)
+- [Support](https://aws.amazon.com/premiumsupport/)
+- [GitHub Organization](https://github.com/aws)
+- [Console](https://console.aws.amazon.com/systems-manager/)
+- [Sign Up](https://signin.aws.amazon.com/signup?request_type=register)
+- [Login](https://aws.amazon.com/console/)
+- [Status Page](https://health.aws.amazon.com/health/status)
+- [Contact](https://aws.amazon.com/contact-us/)
+- [Spectral Rules](https://raw.githubusercontent.com/api-evangelist/amazon-systems-manager/refs/heads/main/rules/amazon-systems-manager-spectral-rules.yml)
+- [Vocabulary](https://raw.githubusercontent.com/api-evangelist/amazon-systems-manager/refs/heads/main/vocabulary/amazon-systems-manager-vocabulary.yaml)
+- [Features](undefined)
+- [Use Cases](undefined)
 
-## Artifacts
+## Maintainers
 
-### Openapi
-- `openapi/amazon-systems-manager-openapi.yml`
-
-### Json Schema
-- `json-schema/amazon-systems-manager-parameter-schema.json`
-
-### Json Structure
-- `json-structure/amazon-systems-manager-parameter-structure.json`
-
-### Json Ld
-- `json-ld/amazon-systems-manager-context.jsonld`
-
-### Examples
-- `examples/amazon-systems-manager-example.json`
-
-### Rules
-- `rules/amazon-systems-manager-spectral-rules.yml`
-
-### Vocabulary
-- `vocabulary/amazon-systems-manager-vocabulary.yaml`
-
-### Capabilities
-- `capabilities/amazon-systems-manager-capability.yaml`
-- `capabilities/shared/amazon-systems-manager-shared.yaml`
+**FN:** Kin Lane
+**Email:** kin@apievangelist.com
+**URL:** https://apievangelist.com
