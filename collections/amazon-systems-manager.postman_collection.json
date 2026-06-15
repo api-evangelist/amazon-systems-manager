@@ -1,0 +1,655 @@
+{
+  "item": [
+    {
+      "id": "13b58b7d-893f-4d36-9786-d2a6acd4545b",
+      "name": "Automation",
+      "description": {
+        "content": "Operations for managing automation executions.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7d22fc2f-9445-4abd-8dfc-2e49ef667a04",
+          "name": "Amazon Systems Manager Start Automation Execution",
+          "request": {
+            "name": "Amazon Systems Manager Start Automation Execution",
+            "description": {
+              "content": "Initiates execution of an Automation runbook to perform operational tasks such as patching, updating AMIs, or managing configuration.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "hash": "StartAutomationExecution",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"DocumentName\": \"<string>\",\n  \"DocumentVersion\": \"<string>\",\n  \"Parameters\": {\n    \"key_0\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"Mode\": \"<string>\",\n  \"TargetLocations\": [\n    \"<object>\",\n    \"<object>\"\n  ]\n}"
+            }
+          },
+          "response": [
+            {
+              "id": "2606be76-2ca7-4492-a325-0a827a8d893c",
+              "name": "Automation execution started.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "StartAutomationExecution",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"DocumentName\": \"<string>\",\n  \"DocumentVersion\": \"<string>\",\n  \"Parameters\": {\n    \"key_0\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"key_1\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"Mode\": \"<string>\",\n  \"TargetLocations\": [\n    \"<object>\",\n    \"<object>\"\n  ]\n}"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"AutomationExecutionId\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "527f0dcd-58a7-4dff-b5dc-2f6d0358cf0f",
+      "name": "Documents",
+      "description": {
+        "content": "Operations for managing SSM documents.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d9ffa198-4393-42e5-8579-5ccf1f0b9ee5",
+          "name": "Amazon Systems Manager Create Document",
+          "request": {
+            "name": "Amazon Systems Manager Create Document",
+            "description": {
+              "content": "Creates an SSM document that describes an instance configuration, which includes the commands to run on an instance.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "hash": "CreateDocument",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"Content\": \"<string>\",\n  \"Name\": \"<string>\",\n  \"DocumentType\": \"<string>\",\n  \"DocumentFormat\": \"<string>\",\n  \"Tags\": [\n    \"<object>\",\n    \"<object>\"\n  ]\n}"
+            }
+          },
+          "response": [
+            {
+              "id": "2cc8e4e8-c44c-406d-841a-9d0e87aeda4a",
+              "name": "Document created successfully.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "CreateDocument",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"Content\": \"<string>\",\n  \"Name\": \"<string>\",\n  \"DocumentType\": \"<string>\",\n  \"DocumentFormat\": \"<string>\",\n  \"Tags\": [\n    \"<object>\",\n    \"<object>\"\n  ]\n}"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"DocumentDescription\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "41bdd9cf-a95d-4db5-86a9-beca47293042",
+      "name": "Managed Instances",
+      "description": {
+        "content": "Operations for managing instance information.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "794c97fe-723d-419d-b76b-c930ba2d66f7",
+          "name": "Amazon Systems Manager Describe Instance Information",
+          "request": {
+            "name": "Amazon Systems Manager Describe Instance Information",
+            "description": {
+              "content": "Describes one or more of your managed instances, including information about the operating system platform, SSM Agent version, and instance status.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "hash": "DescribeInstanceInformation",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"InstanceInformationFilterList\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"MaxResults\": \"<integer>\",\n  \"NextToken\": \"<string>\"\n}"
+            }
+          },
+          "response": [
+            {
+              "id": "074e0959-08c5-4dd0-8e71-a9266f4c42df",
+              "name": "Instance information.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "DescribeInstanceInformation",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"InstanceInformationFilterList\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"MaxResults\": \"<integer>\",\n  \"NextToken\": \"<string>\"\n}"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"InstanceInformationList\": [\n    {\n      \"InstanceId\": \"string\",\n      \"PingStatus\": \"string\",\n      \"PlatformType\": \"string\",\n      \"PlatformName\": \"string\",\n      \"AgentVersion\": \"string\"\n    },\n    {\n      \"InstanceId\": \"string\",\n      \"PingStatus\": \"string\",\n      \"PlatformType\": \"string\",\n      \"PlatformName\": \"string\",\n      \"AgentVersion\": \"string\"\n    }\n  ],\n  \"NextToken\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "758863ac-1ead-480f-8706-c9f269f78f31",
+      "name": "Parameter Store",
+      "description": {
+        "content": "Operations for managing parameters.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "0149aa18-84e3-4f6f-b8db-d6dea234c902",
+          "name": "Amazon Systems Manager Get Parameter",
+          "request": {
+            "name": "Amazon Systems Manager Get Parameter",
+            "description": {
+              "content": "Get information about a single parameter by specifying the parameter name.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "hash": "GetParameter",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"Name\": \"<string>\",\n  \"WithDecryption\": \"<boolean>\"\n}"
+            }
+          },
+          "response": [
+            {
+              "id": "bbeb7f0f-32a8-490d-84bb-b0014aa9b27f",
+              "name": "Parameter details.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "GetParameter",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"Name\": \"<string>\",\n  \"WithDecryption\": \"<boolean>\"\n}"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"Parameter\": {\n    \"Name\": \"string\",\n    \"Type\": \"SecureString\",\n    \"Value\": \"string\",\n    \"Version\": 6558,\n    \"ARN\": \"string\",\n    \"LastModifiedDate\": \"2025-09-20T07:38:11.558Z\",\n    \"DataType\": \"string\",\n    \"Selector\": \"string\",\n    \"SourceResult\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5a8ca2a8-103b-4887-83ad-8556a7dd0a2b",
+          "name": "Amazon Systems Manager Put Parameter",
+          "request": {
+            "name": "Amazon Systems Manager Put Parameter",
+            "description": {
+              "content": "Add a parameter to the system or update an existing parameter.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "hash": "PutParameter",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"Name\": \"<string>\",\n  \"Value\": \"<string>\",\n  \"Type\": \"<string>\",\n  \"Description\": \"<string>\",\n  \"KeyId\": \"<string>\",\n  \"Overwrite\": \"<boolean>\",\n  \"Tier\": \"<string>\",\n  \"Tags\": [\n    {\n      \"Key\": \"<string>\",\n      \"Value\": \"<string>\"\n    },\n    {\n      \"Key\": \"<string>\",\n      \"Value\": \"<string>\"\n    }\n  ]\n}"
+            }
+          },
+          "response": [
+            {
+              "id": "77377799-3676-4458-9f8d-c85ac476b271",
+              "name": "Parameter stored successfully.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "PutParameter",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"Name\": \"<string>\",\n  \"Value\": \"<string>\",\n  \"Type\": \"<string>\",\n  \"Description\": \"<string>\",\n  \"KeyId\": \"<string>\",\n  \"Overwrite\": \"<boolean>\",\n  \"Tier\": \"<string>\",\n  \"Tags\": [\n    {\n      \"Key\": \"<string>\",\n      \"Value\": \"<string>\"\n    },\n    {\n      \"Key\": \"<string>\",\n      \"Value\": \"<string>\"\n    }\n  ]\n}"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"Version\": 2479,\n  \"Tier\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "ddb17401-f451-43ff-bda1-8314c026b862",
+      "name": "Run Command",
+      "description": {
+        "content": "Operations for running commands on managed instances.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "90f471f7-2bcd-4744-a68e-01dd902ddcb3",
+          "name": "Amazon Systems Manager Send Command",
+          "request": {
+            "name": "Amazon Systems Manager Send Command",
+            "description": {
+              "content": "Runs commands on one or more managed instances, allowing you to execute scripts or commands remotely.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"DocumentName\": \"<string>\",\n  \"InstanceIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"Targets\": [\n    {\n      \"Key\": \"<string>\",\n      \"Values\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    {\n      \"Key\": \"<string>\",\n      \"Values\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  ],\n  \"Parameters\": {\n    \"key_0\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"Comment\": \"<string>\",\n  \"TimeoutSeconds\": \"<integer>\"\n}"
+            }
+          },
+          "response": [
+            {
+              "id": "fcb1030f-2b49-4b45-ae3d-802cbe1bb516",
+              "name": "Command sent successfully.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"DocumentName\": \"<string>\",\n  \"InstanceIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"Targets\": [\n    {\n      \"Key\": \"<string>\",\n      \"Values\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    {\n      \"Key\": \"<string>\",\n      \"Values\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  ],\n  \"Parameters\": {\n    \"key_0\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"key_1\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"Comment\": \"<string>\",\n  \"TimeoutSeconds\": \"<integer>\"\n}"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"Command\": {\n    \"CommandId\": \"string\",\n    \"DocumentName\": \"string\",\n    \"Status\": \"string\",\n    \"RequestedDateTime\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b7f83727-cf98-4532-af4d-c5802b468eb2",
+          "name": "Amazon Systems Manager List Commands",
+          "request": {
+            "name": "Amazon Systems Manager List Commands",
+            "description": {
+              "content": "Lists the commands requested by users of the AWS account.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "hash": "ListCommands",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"CommandId\": \"<string>\",\n  \"InstanceId\": \"<string>\",\n  \"MaxResults\": \"<integer>\",\n  \"NextToken\": \"<string>\",\n  \"Filters\": [\n    \"<object>\",\n    \"<object>\"\n  ]\n}"
+            }
+          },
+          "response": [
+            {
+              "id": "7edf382a-85f3-4393-942c-1806317ce506",
+              "name": "List of commands.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "ListCommands",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"CommandId\": \"<string>\",\n  \"InstanceId\": \"<string>\",\n  \"MaxResults\": \"<integer>\",\n  \"NextToken\": \"<string>\",\n  \"Filters\": [\n    \"<object>\",\n    \"<object>\"\n  ]\n}"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"NextToken\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://ssm.amazonaws.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "a4f7f937-9579-4c02-ba2b-81cb6c4df0f2",
+    "name": "Amazon Systems Manager",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Amazon Systems Manager is a management service that provides a unified interface for managing AWS resources, including parameter management, command execution, document management, and automation.\n\nContact Support:\n Name: Kin Lane\n Email: kin@apievangelist.com",
+      "type": "text/plain"
+    }
+  }
+}

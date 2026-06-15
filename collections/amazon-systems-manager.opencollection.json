@@ -1,0 +1,155 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon Systems Manager",
+    "version": "2014-11-06"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Run Command",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Systems Manager Send Command",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://ssm.amazonaws.com/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Runs commands on one or more managed instances, allowing you to execute scripts or commands remotely."
+        },
+        {
+          "info": {
+            "name": "Amazon Systems Manager List Commands",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://ssm.amazonaws.com/#ListCommands",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Lists the commands requested by users of the AWS account."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Parameter Store",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Systems Manager Get Parameter",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://ssm.amazonaws.com/#GetParameter",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Get information about a single parameter by specifying the parameter name."
+        },
+        {
+          "info": {
+            "name": "Amazon Systems Manager Put Parameter",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://ssm.amazonaws.com/#PutParameter",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Add a parameter to the system or update an existing parameter."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Managed Instances",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Systems Manager Describe Instance Information",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://ssm.amazonaws.com/#DescribeInstanceInformation",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Describes one or more of your managed instances, including information about the operating system platform, SSM Agent version, and instance status."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Documents",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Systems Manager Create Document",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://ssm.amazonaws.com/#CreateDocument",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates an SSM document that describes an instance configuration, which includes the commands to run on an instance."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Automation",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Systems Manager Start Automation Execution",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://ssm.amazonaws.com/#StartAutomationExecution",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Initiates execution of an Automation runbook to perform operational tasks such as patching, updating AMIs, or managing configuration."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
