@@ -34,6 +34,12 @@ apis:
       - type: FAQ
         url: https://aws.amazon.com/systems-manager/faq/
 common:
+  - type: TrustCenter
+    url: security/amazon-systems-manager-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/amazon-systems-manager-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/amazon-systems-manager-domain-security.yml
   - type: Portal
     url: https://aws.amazon.com/
   - type: Website
