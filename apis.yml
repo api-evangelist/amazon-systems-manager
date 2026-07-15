@@ -34,6 +34,8 @@ apis:
       - type: FAQ
         url: https://aws.amazon.com/systems-manager/faq/
 common:
+  - type: AgenticAccess
+    url: agentic-access/amazon-systems-manager-agentic-access.yml
   - type: TrustCenter
     url: security/amazon-systems-manager-trust-center.yml
   - type: VulnerabilityDisclosure
