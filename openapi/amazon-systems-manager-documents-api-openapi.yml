@@ -1,0 +1,73 @@
+openapi: 3.0.0
+info:
+  title: Amazon Systems Manager Automation Documents API
+  description: Amazon Systems Manager is a management service that provides a unified interface for managing AWS resources, including parameter management, command execution, document management, and automation.
+  version: '2014-11-06'
+  contact:
+    name: Kin Lane
+    email: kin@apievangelist.com
+    url: https://aws.amazon.com/systems-manager/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+servers:
+- url: https://ssm.amazonaws.com
+  description: Amazon Systems Manager API endpoint
+tags:
+- name: Documents
+  description: Operations for managing SSM documents.
+paths:
+  /#CreateDocument:
+    post:
+      operationId: CreateDocument
+      summary: Amazon Systems Manager Create Document
+      description: Creates an SSM document that describes an instance configuration, which includes the commands to run on an instance.
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              properties:
+                Content:
+                  type: string
+                  description: The content for the new SSM document in JSON or YAML format.
+                Name:
+                  type: string
+                  description: A name for the SSM document.
+                DocumentType:
+                  type: string
+                  enum:
+                  - Command
+                  - Policy
+                  - Automation
+                  - Session
+                  - Package
+                DocumentFormat:
+                  type: string
+                  enum:
+                  - YAML
+                  - JSON
+                  - TEXT
+                Tags:
+                  type: array
+                  items:
+                    type: object
+              required:
+              - Content
+              - Name
+      responses:
+        '200':
+          description: Document created successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  DocumentDescription:
+                    type: object
+      tags:
+      - Documents
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK

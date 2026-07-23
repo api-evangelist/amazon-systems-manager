@@ -1,0 +1,69 @@
+openapi: 3.0.0
+info:
+  title: Amazon Systems Manager Automation Managed Instances API
+  description: Amazon Systems Manager is a management service that provides a unified interface for managing AWS resources, including parameter management, command execution, document management, and automation.
+  version: '2014-11-06'
+  contact:
+    name: Kin Lane
+    email: kin@apievangelist.com
+    url: https://aws.amazon.com/systems-manager/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+servers:
+- url: https://ssm.amazonaws.com
+  description: Amazon Systems Manager API endpoint
+tags:
+- name: Managed Instances
+  description: Operations for managing instance information.
+paths:
+  /#DescribeInstanceInformation:
+    post:
+      operationId: DescribeInstanceInformation
+      summary: Amazon Systems Manager Describe Instance Information
+      description: Describes one or more of your managed instances, including information about the operating system platform, SSM Agent version, and instance status.
+      requestBody:
+        required: false
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              properties:
+                InstanceInformationFilterList:
+                  type: array
+                  items:
+                    type: object
+                MaxResults:
+                  type: integer
+                NextToken:
+                  type: string
+      responses:
+        '200':
+          description: Instance information.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  InstanceInformationList:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        InstanceId:
+                          type: string
+                        PingStatus:
+                          type: string
+                        PlatformType:
+                          type: string
+                        PlatformName:
+                          type: string
+                        AgentVersion:
+                          type: string
+                  NextToken:
+                    type: string
+      tags:
+      - Managed Instances
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK

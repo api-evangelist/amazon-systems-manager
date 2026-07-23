@@ -1,0 +1,164 @@
+openapi: 3.0.0
+info:
+  title: Amazon Systems Manager Automation Parameter Store API
+  description: Amazon Systems Manager is a management service that provides a unified interface for managing AWS resources, including parameter management, command execution, document management, and automation.
+  version: '2014-11-06'
+  contact:
+    name: Kin Lane
+    email: kin@apievangelist.com
+    url: https://aws.amazon.com/systems-manager/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+servers:
+- url: https://ssm.amazonaws.com
+  description: Amazon Systems Manager API endpoint
+tags:
+- name: Parameter Store
+  description: Operations for managing parameters.
+paths:
+  /#GetParameter:
+    post:
+      operationId: GetParameter
+      summary: Amazon Systems Manager Get Parameter
+      description: Get information about a single parameter by specifying the parameter name.
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              properties:
+                Name:
+                  type: string
+                  description: The name of the parameter to retrieve.
+                WithDecryption:
+                  type: boolean
+                  description: Return decrypted values for secure string parameters.
+              required:
+              - Name
+      responses:
+        '200':
+          description: Parameter details.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Parameter:
+                    $ref: '#/components/schemas/Parameter'
+      tags:
+      - Parameter Store
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+  /#PutParameter:
+    post:
+      operationId: PutParameter
+      summary: Amazon Systems Manager Put Parameter
+      description: Add a parameter to the system or update an existing parameter.
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              properties:
+                Name:
+                  type: string
+                  description: The fully qualified name of the parameter.
+                Description:
+                  type: string
+                Value:
+                  type: string
+                  description: The parameter value.
+                Type:
+                  type: string
+                  enum:
+                  - String
+                  - StringList
+                  - SecureString
+                KeyId:
+                  type: string
+                  description: The KMS Key ID for SecureString parameters.
+                Overwrite:
+                  type: boolean
+                Tier:
+                  type: string
+                  enum:
+                  - Standard
+                  - Advanced
+                  - Intelligent-Tiering
+                Tags:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      Key:
+                        type: string
+                      Value:
+                        type: string
+              required:
+              - Name
+              - Value
+              - Type
+      responses:
+        '200':
+          description: Parameter stored successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Version:
+                    type: integer
+                  Tier:
+                    type: string
+      tags:
+      - Parameter Store
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+components:
+  schemas:
+    Parameter:
+      type: object
+      description: An SSM Parameter Store parameter containing configuration data.
+      properties:
+        Name:
+          type: string
+          description: The name of the parameter.
+        Type:
+          type: string
+          description: The type of parameter.
+          enum:
+          - String
+          - StringList
+          - SecureString
+        Value:
+          type: string
+          description: The parameter value.
+        Version:
+          type: integer
+          description: The parameter version.
+        ARN:
+          type: string
+          description: The Amazon Resource Name (ARN) of the parameter.
+        LastModifiedDate:
+          type: string
+          format: date-time
+          description: Date the parameter was last changed or updated.
+        DataType:
+          type: string
+          description: The data type of the parameter.
+        Selector:
+          type: string
+          description: Either the version number or the label used to retrieve the parameter value.
+        SourceResult:
+          type: string
+          description: The raw result or response from the source.
+      required:
+      - Name
+      - Type
+      - Value
+      - Version

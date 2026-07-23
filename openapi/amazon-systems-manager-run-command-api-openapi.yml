@@ -1,0 +1,136 @@
+openapi: 3.0.0
+info:
+  title: Amazon Systems Manager Automation Run Command API
+  description: Amazon Systems Manager is a management service that provides a unified interface for managing AWS resources, including parameter management, command execution, document management, and automation.
+  version: '2014-11-06'
+  contact:
+    name: Kin Lane
+    email: kin@apievangelist.com
+    url: https://aws.amazon.com/systems-manager/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+servers:
+- url: https://ssm.amazonaws.com
+  description: Amazon Systems Manager API endpoint
+tags:
+- name: Run Command
+  description: Operations for running commands on managed instances.
+paths:
+  /:
+    post:
+      operationId: SendCommand
+      summary: Amazon Systems Manager Send Command
+      description: Runs commands on one or more managed instances, allowing you to execute scripts or commands remotely.
+      headers:
+        X-Amz-Target:
+          description: The target API operation.
+          schema:
+            type: string
+            enum:
+            - AmazonSSM.SendCommand
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              properties:
+                DocumentName:
+                  type: string
+                  description: The name of the SSM document to run.
+                InstanceIds:
+                  type: array
+                  description: The IDs of the instances where the command should run.
+                  items:
+                    type: string
+                Targets:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      Key:
+                        type: string
+                      Values:
+                        type: array
+                        items:
+                          type: string
+                Parameters:
+                  type: object
+                  additionalProperties:
+                    type: array
+                    items:
+                      type: string
+                Comment:
+                  type: string
+                TimeoutSeconds:
+                  type: integer
+              required:
+              - DocumentName
+      responses:
+        '200':
+          description: Command sent successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Command:
+                    type: object
+                    properties:
+                      CommandId:
+                        type: string
+                      DocumentName:
+                        type: string
+                      Status:
+                        type: string
+                      RequestedDateTime:
+                        type: string
+      tags:
+      - Run Command
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+  /#ListCommands:
+    post:
+      operationId: ListCommands
+      summary: Amazon Systems Manager List Commands
+      description: Lists the commands requested by users of the AWS account.
+      requestBody:
+        required: false
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              properties:
+                CommandId:
+                  type: string
+                InstanceId:
+                  type: string
+                MaxResults:
+                  type: integer
+                NextToken:
+                  type: string
+                Filters:
+                  type: array
+                  items:
+                    type: object
+      responses:
+        '200':
+          description: List of commands.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Commands:
+                    type: array
+                    items:
+                      type: object
+                  NextToken:
+                    type: string
+      tags:
+      - Run Command
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK

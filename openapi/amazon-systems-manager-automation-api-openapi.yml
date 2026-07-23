@@ -1,0 +1,68 @@
+openapi: 3.0.0
+info:
+  title: Amazon Systems Manager Automation API
+  description: Amazon Systems Manager is a management service that provides a unified interface for managing AWS resources, including parameter management, command execution, document management, and automation.
+  version: '2014-11-06'
+  contact:
+    name: Kin Lane
+    email: kin@apievangelist.com
+    url: https://aws.amazon.com/systems-manager/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+servers:
+- url: https://ssm.amazonaws.com
+  description: Amazon Systems Manager API endpoint
+tags:
+- name: Automation
+  description: Operations for managing automation executions.
+paths:
+  /#StartAutomationExecution:
+    post:
+      operationId: StartAutomationExecution
+      summary: Amazon Systems Manager Start Automation Execution
+      description: Initiates execution of an Automation runbook to perform operational tasks such as patching, updating AMIs, or managing configuration.
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              properties:
+                DocumentName:
+                  type: string
+                  description: The name of the SSM Automation runbook to run.
+                DocumentVersion:
+                  type: string
+                Parameters:
+                  type: object
+                  additionalProperties:
+                    type: array
+                    items:
+                      type: string
+                Mode:
+                  type: string
+                  enum:
+                  - Auto
+                  - Interactive
+                TargetLocations:
+                  type: array
+                  items:
+                    type: object
+              required:
+              - DocumentName
+      responses:
+        '200':
+          description: Automation execution started.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  AutomationExecutionId:
+                    type: string
+      tags:
+      - Automation
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
