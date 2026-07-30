@@ -3,37 +3,116 @@ description: >-
   AWS Systems Manager is an operational management service that provides a unified interface for managing AWS resources
   and on-premises infrastructure. It enables automation of operational tasks, configuration management, patch
   management, parameter storage, and run command execution across your hybrid cloud environment at scale.
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
 url: https://aws.amazon.com/systems-manager/
 created: '2024-01-15'
 modified: '2026-05-19'
 apis:
-  - name: AWS Systems Manager API
-    description: >-
-      The AWS Systems Manager API provides programmatic access to manage and automate operational tasks across your AWS
-      and on-premises infrastructure. It enables developers to run commands on managed instances, manage parameters and
-      secrets, create automation documents, configure patch baselines, manage inventory, and set up maintenance windows.
-    image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
-    humanURL: https://aws.amazon.com/systems-manager/
-    baseURL: https://ssm.amazonaws.com
-    tags:
-      - Automation
-      - AWS
-      - Management
-      - Operations
-    properties:
-      - type: Documentation
-        url: https://docs.aws.amazon.com/systems-manager/
-      - type: OpenAPI
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/amazon-systems-manager/refs/heads/main/openapi/amazon-systems-manager-openapi.yml
-      - type: Pricing
-        url: https://aws.amazon.com/systems-manager/pricing/
-      - type: GettingStarted
-        url: https://aws.amazon.com/systems-manager/getting-started/
-      - type: FAQ
-        url: https://aws.amazon.com/systems-manager/faq/
+- aid: amazon-systems-manager:amazon-systems-manager-automation-api
+  name: Amazon Systems Manager Automation API
+  description: Operations for managing automation executions.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Automation
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-automation-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/systems-manager/
+  - type: Pricing
+    url: https://aws.amazon.com/systems-manager/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/systems-manager/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/systems-manager/faq/
+- aid: amazon-systems-manager:amazon-systems-manager-documents-api
+  name: Amazon Systems Manager Documents API
+  description: Operations for managing SSM documents.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Documents
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-documents-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/systems-manager/
+  - type: Pricing
+    url: https://aws.amazon.com/systems-manager/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/systems-manager/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/systems-manager/faq/
+- aid: amazon-systems-manager:amazon-systems-manager-managed-instances-api
+  name: Amazon Systems Manager Managed Instances API
+  description: Operations for managing instance information.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Managed Instances
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-managed-instances-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/systems-manager/
+  - type: Pricing
+    url: https://aws.amazon.com/systems-manager/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/systems-manager/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/systems-manager/faq/
+- aid: amazon-systems-manager:amazon-systems-manager-parameter-store-api
+  name: Amazon Systems Manager Parameter Store API
+  description: Operations for managing parameters.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Parameter Store
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-parameter-store-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/systems-manager/
+  - type: Pricing
+    url: https://aws.amazon.com/systems-manager/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/systems-manager/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/systems-manager/faq/
+- aid: amazon-systems-manager:amazon-systems-manager-run-command-api
+  name: Amazon Systems Manager Run Command API
+  description: Operations for running commands on managed instances.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Run Command
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-run-command-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/systems-manager/
+  - type: Pricing
+    url: https://aws.amazon.com/systems-manager/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/systems-manager/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/systems-manager/faq/
 common:
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/amazon-systems-manager/overview
   - type: AgenticAccess
     url: agentic-access/amazon-systems-manager-agentic-access.yml
   - type: TrustCenter
