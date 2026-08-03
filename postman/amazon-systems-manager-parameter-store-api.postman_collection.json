@@ -1,0 +1,210 @@
+{
+  "info": {
+    "_postman_id": "2f7d8f70-5fd6-4d2a-8ff2-7a8e0a965c6d",
+    "name": "Amazon Systems Manager Automation Parameter Store API",
+    "description": "Amazon Systems Manager is a management service that provides a unified interface for managing AWS resources, including parameter management, command execution, document management, and automation.\n\nContact Support:\n Name: Kin Lane\n Email: kin@apievangelist.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T00:55:42.000Z",
+    "updatedAt": "2026-07-28T00:55:42.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-2f7d8f70-5fd6-4d2a-8ff2-7a8e0a965c6d"
+  },
+  "item": [
+    {
+      "name": "#GetParameter",
+      "item": [
+        {
+          "name": "Amazon Systems Manager Get Parameter",
+          "id": "68a76b85-dafb-4bce-ac79-739ea879c008",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"Name\": \"<string>\",\n  \"WithDecryption\": \"<boolean>\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#GetParameter",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "GetParameter"
+            },
+            "description": "Get information about a single parameter by specifying the parameter name."
+          },
+          "response": [
+            {
+              "id": "697225ba-af3c-45ec-9773-37437a4dda9a",
+              "name": "Parameter details.",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-amz-json-1.1"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"Name\": \"<string>\",\n  \"WithDecryption\": \"<boolean>\"\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#GetParameter",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "GetParameter"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"Parameter\": {\n    \"Name\": \"<string>\",\n    \"Type\": \"String\",\n    \"Value\": \"<string>\",\n    \"Version\": \"<integer>\",\n    \"ARN\": \"<string>\",\n    \"LastModifiedDate\": \"<dateTime>\",\n    \"DataType\": \"<string>\",\n    \"Selector\": \"<string>\",\n    \"SourceResult\": \"<string>\"\n  }\n}",
+              "createdAt": "2026-07-28T00:55:43.000Z",
+              "updatedAt": "2026-07-28T00:55:43.000Z",
+              "uid": "35240-697225ba-af3c-45ec-9773-37437a4dda9a"
+            }
+          ],
+          "createdAt": "2026-07-28T00:55:43.000Z",
+          "updatedAt": "2026-07-28T00:55:43.000Z",
+          "uid": "35240-68a76b85-dafb-4bce-ac79-739ea879c008"
+        }
+      ],
+      "id": "ee559471-ef60-4e32-a6ac-2ea283358320",
+      "createdAt": "2026-07-28T00:55:43.000Z",
+      "updatedAt": "2026-07-28T00:55:43.000Z",
+      "uid": "35240-ee559471-ef60-4e32-a6ac-2ea283358320"
+    },
+    {
+      "name": "#PutParameter",
+      "item": [
+        {
+          "name": "Amazon Systems Manager Put Parameter",
+          "id": "7ee89d10-5fe9-4de0-8db6-0177808221c5",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"Name\": \"<string>\",\n  \"Value\": \"<string>\",\n  \"Type\": \"String\",\n  \"Description\": \"<string>\",\n  \"KeyId\": \"<string>\",\n  \"Overwrite\": \"<boolean>\",\n  \"Tier\": \"Standard\",\n  \"Tags\": [\n    {\n      \"Key\": \"<string>\",\n      \"Value\": \"<string>\"\n    },\n    {\n      \"Key\": \"<string>\",\n      \"Value\": \"<string>\"\n    }\n  ]\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#PutParameter",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "PutParameter"
+            },
+            "description": "Add a parameter to the system or update an existing parameter."
+          },
+          "response": [
+            {
+              "id": "1dcb1d34-0fac-441a-87f0-d441d556ec6a",
+              "name": "Parameter stored successfully.",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-amz-json-1.1"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"Name\": \"<string>\",\n  \"Value\": \"<string>\",\n  \"Type\": \"String\",\n  \"Description\": \"<string>\",\n  \"KeyId\": \"<string>\",\n  \"Overwrite\": \"<boolean>\",\n  \"Tier\": \"Standard\",\n  \"Tags\": [\n    {\n      \"Key\": \"<string>\",\n      \"Value\": \"<string>\"\n    },\n    {\n      \"Key\": \"<string>\",\n      \"Value\": \"<string>\"\n    }\n  ]\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#PutParameter",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "PutParameter"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"Version\": \"<integer>\",\n  \"Tier\": \"<string>\"\n}",
+              "createdAt": "2026-07-28T00:55:43.000Z",
+              "updatedAt": "2026-07-28T00:55:43.000Z",
+              "uid": "35240-1dcb1d34-0fac-441a-87f0-d441d556ec6a"
+            }
+          ],
+          "createdAt": "2026-07-28T00:55:43.000Z",
+          "updatedAt": "2026-07-28T00:55:43.000Z",
+          "uid": "35240-7ee89d10-5fe9-4de0-8db6-0177808221c5"
+        }
+      ],
+      "id": "4bc493b7-0543-4707-96a2-9d89cf6f5dd2",
+      "createdAt": "2026-07-28T00:55:43.000Z",
+      "updatedAt": "2026-07-28T00:55:43.000Z",
+      "uid": "35240-4bc493b7-0543-4707-96a2-9d89cf6f5dd2"
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://ssm.amazonaws.com"
+    }
+  ]
+}

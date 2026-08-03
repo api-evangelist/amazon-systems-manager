@@ -1,0 +1,22 @@
+{
+  "provider": "amazon-systems-manager",
+  "sources": [
+    "amazon-systems-manager-automation-api-openapi.yml",
+    "amazon-systems-manager-documents-api-openapi.yml",
+    "amazon-systems-manager-managed-instances-api-openapi.yml",
+    "amazon-systems-manager-parameter-store-api-openapi.yml",
+    "amazon-systems-manager-run-command-api-openapi.yml"
+  ],
+  "outputs": [
+    "amazon-systems-manager-automation-api-openapi.yml",
+    "amazon-systems-manager-documents-api-openapi.yml",
+    "amazon-systems-manager-managed-instances-api-openapi.yml",
+    "amazon-systems-manager-parameter-store-api-openapi.yml",
+    "amazon-systems-manager-run-command-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

@@ -1,0 +1,115 @@
+{
+  "info": {
+    "_postman_id": "8012ce17-00fd-4c35-b201-e3218e7c8c6e",
+    "name": "Amazon Systems Manager Automation API",
+    "description": "Amazon Systems Manager is a management service that provides a unified interface for managing AWS resources, including parameter management, command execution, document management, and automation.\n\nContact Support:\n Name: Kin Lane\n Email: kin@apievangelist.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T00:55:40.000Z",
+    "updatedAt": "2026-07-28T00:55:40.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-8012ce17-00fd-4c35-b201-e3218e7c8c6e"
+  },
+  "item": [
+    {
+      "name": "#StartAutomationExecution",
+      "item": [
+        {
+          "name": "Amazon Systems Manager Start Automation Execution",
+          "id": "0f3368fd-b79a-442e-a799-d694eabb1bd9",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"DocumentName\": \"<string>\",\n  \"DocumentVersion\": \"<string>\",\n  \"Parameters\": {\n    \"eu_3a\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"magna_f3\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"Duisad7\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"Mode\": \"Interactive\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#StartAutomationExecution",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "StartAutomationExecution"
+            },
+            "description": "Initiates execution of an Automation runbook to perform operational tasks such as patching, updating AMIs, or managing configuration."
+          },
+          "response": [
+            {
+              "id": "929af6a9-f60e-479b-bc71-71119e253361",
+              "name": "Automation execution started.",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-amz-json-1.1"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"DocumentName\": \"<string>\",\n  \"DocumentVersion\": \"<string>\",\n  \"Parameters\": {\n    \"eu_3a\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"magna_f3\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"Duisad7\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"Mode\": \"Interactive\"\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#StartAutomationExecution",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "StartAutomationExecution"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"AutomationExecutionId\": \"<string>\"\n}",
+              "createdAt": "2026-07-28T00:55:40.000Z",
+              "updatedAt": "2026-07-28T00:55:40.000Z",
+              "uid": "35240-929af6a9-f60e-479b-bc71-71119e253361"
+            }
+          ],
+          "createdAt": "2026-07-28T00:55:40.000Z",
+          "updatedAt": "2026-07-28T00:55:40.000Z",
+          "uid": "35240-0f3368fd-b79a-442e-a799-d694eabb1bd9"
+        }
+      ],
+      "id": "36d6cb96-e37d-4b1c-9e2f-059e06b71498",
+      "createdAt": "2026-07-28T00:55:40.000Z",
+      "updatedAt": "2026-07-28T00:55:40.000Z",
+      "uid": "35240-36d6cb96-e37d-4b1c-9e2f-059e06b71498"
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://ssm.amazonaws.com"
+    }
+  ]
+}

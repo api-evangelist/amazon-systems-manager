@@ -1,0 +1,115 @@
+{
+  "info": {
+    "_postman_id": "0d24e0f8-ae54-435b-9c7e-c85195fce8c7",
+    "name": "Amazon Systems Manager Automation Documents API",
+    "description": "Amazon Systems Manager is a management service that provides a unified interface for managing AWS resources, including parameter management, command execution, document management, and automation.\n\nContact Support:\n Name: Kin Lane\n Email: kin@apievangelist.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T00:55:41.000Z",
+    "updatedAt": "2026-07-28T00:55:41.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-0d24e0f8-ae54-435b-9c7e-c85195fce8c7"
+  },
+  "item": [
+    {
+      "name": "#CreateDocument",
+      "item": [
+        {
+          "name": "Amazon Systems Manager Create Document",
+          "id": "dc07b2dd-56dc-4810-b90c-ce237c249d33",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"Content\": \"<string>\",\n  \"Name\": \"<string>\",\n  \"DocumentType\": \"Command\",\n  \"DocumentFormat\": \"JSON\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#CreateDocument",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "CreateDocument"
+            },
+            "description": "Creates an SSM document that describes an instance configuration, which includes the commands to run on an instance."
+          },
+          "response": [
+            {
+              "id": "6866e40a-3a2c-46e8-98f3-0d83f6f92ded",
+              "name": "Document created successfully.",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-amz-json-1.1"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"Content\": \"<string>\",\n  \"Name\": \"<string>\",\n  \"DocumentType\": \"Command\",\n  \"DocumentFormat\": \"JSON\"\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#CreateDocument",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "CreateDocument"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"DocumentDescription\": {}\n}",
+              "createdAt": "2026-07-28T00:55:41.000Z",
+              "updatedAt": "2026-07-28T00:55:41.000Z",
+              "uid": "35240-6866e40a-3a2c-46e8-98f3-0d83f6f92ded"
+            }
+          ],
+          "createdAt": "2026-07-28T00:55:41.000Z",
+          "updatedAt": "2026-07-28T00:55:41.000Z",
+          "uid": "35240-dc07b2dd-56dc-4810-b90c-ce237c249d33"
+        }
+      ],
+      "id": "d8be1d2a-da6c-422f-950d-6aff5c617698",
+      "createdAt": "2026-07-28T00:55:41.000Z",
+      "updatedAt": "2026-07-28T00:55:41.000Z",
+      "uid": "35240-d8be1d2a-da6c-422f-950d-6aff5c617698"
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://ssm.amazonaws.com"
+    }
+  ]
+}

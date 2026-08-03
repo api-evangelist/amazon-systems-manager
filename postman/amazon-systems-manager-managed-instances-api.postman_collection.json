@@ -1,0 +1,115 @@
+{
+  "info": {
+    "_postman_id": "66e3a1c4-5f2b-4e49-8ad3-d21a3046073a",
+    "name": "Amazon Systems Manager Automation Managed Instances API",
+    "description": "Amazon Systems Manager is a management service that provides a unified interface for managing AWS resources, including parameter management, command execution, document management, and automation.\n\nContact Support:\n Name: Kin Lane\n Email: kin@apievangelist.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T00:55:41.000Z",
+    "updatedAt": "2026-07-28T00:55:42.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-66e3a1c4-5f2b-4e49-8ad3-d21a3046073a"
+  },
+  "item": [
+    {
+      "name": "#DescribeInstanceInformation",
+      "item": [
+        {
+          "name": "Amazon Systems Manager Describe Instance Information",
+          "id": "35136bd1-1300-484d-b7c3-c41083d68230",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"MaxResults\": \"<integer>\",\n  \"NextToken\": \"<string>\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#DescribeInstanceInformation",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "DescribeInstanceInformation"
+            },
+            "description": "Describes one or more of your managed instances, including information about the operating system platform, SSM Agent version, and instance status."
+          },
+          "response": [
+            {
+              "id": "f31812dd-03d3-4b21-86d0-8a7071fb0611",
+              "name": "Instance information.",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-amz-json-1.1"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"MaxResults\": \"<integer>\",\n  \"NextToken\": \"<string>\"\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#DescribeInstanceInformation",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "DescribeInstanceInformation"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"InstanceInformationList\": [\n    {\n      \"InstanceId\": \"<string>\",\n      \"PingStatus\": \"<string>\",\n      \"PlatformType\": \"<string>\",\n      \"PlatformName\": \"<string>\",\n      \"AgentVersion\": \"<string>\"\n    },\n    {\n      \"InstanceId\": \"<string>\",\n      \"PingStatus\": \"<string>\",\n      \"PlatformType\": \"<string>\",\n      \"PlatformName\": \"<string>\",\n      \"AgentVersion\": \"<string>\"\n    }\n  ],\n  \"NextToken\": \"<string>\"\n}",
+              "createdAt": "2026-07-28T00:55:42.000Z",
+              "updatedAt": "2026-07-28T00:55:42.000Z",
+              "uid": "35240-f31812dd-03d3-4b21-86d0-8a7071fb0611"
+            }
+          ],
+          "createdAt": "2026-07-28T00:55:42.000Z",
+          "updatedAt": "2026-07-28T00:55:42.000Z",
+          "uid": "35240-35136bd1-1300-484d-b7c3-c41083d68230"
+        }
+      ],
+      "id": "492f5995-8db2-41df-963a-51674bcc397a",
+      "createdAt": "2026-07-28T00:55:42.000Z",
+      "updatedAt": "2026-07-28T00:55:42.000Z",
+      "uid": "35240-492f5995-8db2-41df-963a-51674bcc397a"
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://ssm.amazonaws.com"
+    }
+  ]
+}

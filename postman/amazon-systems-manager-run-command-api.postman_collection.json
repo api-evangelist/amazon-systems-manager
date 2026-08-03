@@ -1,0 +1,208 @@
+{
+  "info": {
+    "_postman_id": "065aa2b6-fc90-43e5-8237-7e8d93e40d32",
+    "name": "Amazon Systems Manager Automation Run Command API",
+    "description": "Amazon Systems Manager is a management service that provides a unified interface for managing AWS resources, including parameter management, command execution, document management, and automation.\n\nContact Support:\n Name: Kin Lane\n Email: kin@apievangelist.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T00:55:43.000Z",
+    "updatedAt": "2026-07-28T00:55:43.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-065aa2b6-fc90-43e5-8237-7e8d93e40d32"
+  },
+  "item": [
+    {
+      "name": "/",
+      "item": [
+        {
+          "name": "Amazon Systems Manager Send Command",
+          "id": "12674462-cba2-4c3a-bf1d-4fdff6c02819",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"DocumentName\": \"<string>\",\n  \"InstanceIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"Targets\": [\n    {\n      \"Key\": \"<string>\",\n      \"Values\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    {\n      \"Key\": \"<string>\",\n      \"Values\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  ],\n  \"Parameters\": {\n    \"dolor29\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"pariaturf\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"Comment\": \"<string>\",\n  \"TimeoutSeconds\": \"<integer>\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            },
+            "description": "Runs commands on one or more managed instances, allowing you to execute scripts or commands remotely."
+          },
+          "response": [
+            {
+              "id": "e33e92fa-52fa-4ff2-8b47-4b56b53a9257",
+              "name": "Command sent successfully.",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-amz-json-1.1"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"DocumentName\": \"<string>\",\n  \"InstanceIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"Targets\": [\n    {\n      \"Key\": \"<string>\",\n      \"Values\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    {\n      \"Key\": \"<string>\",\n      \"Values\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  ],\n  \"Parameters\": {\n    \"dolor29\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"pariaturf\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"Comment\": \"<string>\",\n  \"TimeoutSeconds\": \"<integer>\"\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"Command\": {\n    \"CommandId\": \"<string>\",\n    \"DocumentName\": \"<string>\",\n    \"Status\": \"<string>\",\n    \"RequestedDateTime\": \"<string>\"\n  }\n}",
+              "createdAt": "2026-07-28T00:55:44.000Z",
+              "updatedAt": "2026-07-28T00:55:44.000Z",
+              "uid": "35240-e33e92fa-52fa-4ff2-8b47-4b56b53a9257"
+            }
+          ],
+          "createdAt": "2026-07-28T00:55:44.000Z",
+          "updatedAt": "2026-07-28T00:55:44.000Z",
+          "uid": "35240-12674462-cba2-4c3a-bf1d-4fdff6c02819"
+        }
+      ],
+      "id": "5906a139-94fa-4038-9272-cf87dbc77130",
+      "createdAt": "2026-07-28T00:55:44.000Z",
+      "updatedAt": "2026-07-28T00:55:44.000Z",
+      "uid": "35240-5906a139-94fa-4038-9272-cf87dbc77130"
+    },
+    {
+      "name": "#ListCommands",
+      "item": [
+        {
+          "name": "Amazon Systems Manager List Commands",
+          "id": "2ce96248-cf53-4d73-bca6-1fd8a49ca24e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"CommandId\": \"<string>\",\n  \"InstanceId\": \"<string>\",\n  \"MaxResults\": \"<integer>\",\n  \"NextToken\": \"<string>\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#ListCommands",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "ListCommands"
+            },
+            "description": "Lists the commands requested by users of the AWS account."
+          },
+          "response": [
+            {
+              "id": "4ce1bf82-758a-4e01-bdff-42ba1d2d9343",
+              "name": "List of commands.",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-amz-json-1.1"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"CommandId\": \"<string>\",\n  \"InstanceId\": \"<string>\",\n  \"MaxResults\": \"<integer>\",\n  \"NextToken\": \"<string>\"\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#ListCommands",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "ListCommands"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"NextToken\": \"<string>\"\n}",
+              "createdAt": "2026-07-28T00:55:44.000Z",
+              "updatedAt": "2026-07-28T00:55:44.000Z",
+              "uid": "35240-4ce1bf82-758a-4e01-bdff-42ba1d2d9343"
+            }
+          ],
+          "createdAt": "2026-07-28T00:55:44.000Z",
+          "updatedAt": "2026-07-28T00:55:44.000Z",
+          "uid": "35240-2ce96248-cf53-4d73-bca6-1fd8a49ca24e"
+        }
+      ],
+      "id": "e13a8c4e-82fb-4369-9412-29ff9fca266b",
+      "createdAt": "2026-07-28T00:55:44.000Z",
+      "updatedAt": "2026-07-28T00:55:44.000Z",
+      "uid": "35240-e13a8c4e-82fb-4369-9412-29ff9fca266b"
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://ssm.amazonaws.com"
+    }
+  ]
+}
