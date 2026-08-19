@@ -1,0 +1,115 @@
+{
+  "item": [
+    {
+      "id": "5d294bcc-4fbb-428b-b463-01549b17051b",
+      "name": "Documents",
+      "description": {
+        "content": "Operations for managing SSM documents.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "dd4e3e69-a5ca-4294-bbb4-393e6eb076d5",
+          "name": "Amazon Systems Manager Create Document",
+          "request": {
+            "name": "Amazon Systems Manager Create Document",
+            "description": {
+              "content": "Creates an SSM document that describes an instance configuration, which includes the commands to run on an instance.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "hash": "CreateDocument",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"Content\": \"<string>\",\n  \"Name\": \"<string>\",\n  \"DocumentType\": \"<string>\",\n  \"DocumentFormat\": \"<string>\",\n  \"Tags\": [\n    \"<object>\",\n    \"<object>\"\n  ]\n}"
+            }
+          },
+          "response": [
+            {
+              "id": "266a56bd-59c9-44a8-ac70-a7d7d2ebacae",
+              "name": "Document created successfully.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "CreateDocument",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"Content\": \"<string>\",\n  \"Name\": \"<string>\",\n  \"DocumentType\": \"<string>\",\n  \"DocumentFormat\": \"<string>\",\n  \"Tags\": [\n    \"<object>\",\n    \"<object>\"\n  ]\n}"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"DocumentDescription\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://ssm.amazonaws.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "5b3ae3d5-9e0b-467d-a7b5-07c3fc47bbfe",
+    "name": "Amazon Systems Manager Automation Documents API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Amazon Systems Manager is a management service that provides a unified interface for managing AWS resources, including parameter management, command execution, document management, and automation.\n\nContact Support:\n Name: Kin Lane\n Email: kin@apievangelist.com",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "item": [
+    {
+      "id": "ec67575f-01f0-431b-a917-417b2a5b8eef",
+      "name": "Automation",
+      "description": {
+        "content": "Operations for managing automation executions.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "54138a44-fa29-460c-aa9e-132103391186",
+          "name": "Amazon Systems Manager Start Automation Execution",
+          "request": {
+            "name": "Amazon Systems Manager Start Automation Execution",
+            "description": {
+              "content": "Initiates execution of an Automation runbook to perform operational tasks such as patching, updating AMIs, or managing configuration.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "hash": "StartAutomationExecution",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"DocumentName\": \"<string>\",\n  \"DocumentVersion\": \"<string>\",\n  \"Parameters\": {\n    \"key_0\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"Mode\": \"<string>\",\n  \"TargetLocations\": [\n    \"<object>\",\n    \"<object>\"\n  ]\n}"
+            }
+          },
+          "response": [
+            {
+              "id": "3ac16fba-e8cc-4914-bc25-e2b1bcf6339c",
+              "name": "Automation execution started.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "StartAutomationExecution",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"DocumentName\": \"<string>\",\n  \"DocumentVersion\": \"<string>\",\n  \"Parameters\": {\n    \"key_0\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"key_1\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"Mode\": \"<string>\",\n  \"TargetLocations\": [\n    \"<object>\",\n    \"<object>\"\n  ]\n}"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"AutomationExecutionId\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://ssm.amazonaws.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "014a8a3d-3a7a-45cd-acb9-4337efc44c80",
+    "name": "Amazon Systems Manager Automation API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Amazon Systems Manager is a management service that provides a unified interface for managing AWS resources, including parameter management, command execution, document management, and automation.\n\nContact Support:\n Name: Kin Lane\n Email: kin@apievangelist.com",
+      "type": "text/plain"
+    }
+  }
+}

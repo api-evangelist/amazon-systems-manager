@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon Systems Manager Automation Managed Instances API",
+    "version": "2014-11-06"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Managed Instances",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Systems Manager Describe Instance Information",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://ssm.amazonaws.com/#DescribeInstanceInformation",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Describes one or more of your managed instances, including information about the operating system platform, SSM Agent version, and instance status."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

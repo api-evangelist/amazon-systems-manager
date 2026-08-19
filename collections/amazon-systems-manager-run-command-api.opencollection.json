@@ -1,0 +1,48 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon Systems Manager Automation Run Command API",
+    "version": "2014-11-06"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Run Command",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Systems Manager Send Command",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://ssm.amazonaws.com/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Runs commands on one or more managed instances, allowing you to execute scripts or commands remotely."
+        },
+        {
+          "info": {
+            "name": "Amazon Systems Manager List Commands",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://ssm.amazonaws.com/#ListCommands",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Lists the commands requested by users of the AWS account."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

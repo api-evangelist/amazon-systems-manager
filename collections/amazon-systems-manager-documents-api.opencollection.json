@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon Systems Manager Automation Documents API",
+    "version": "2014-11-06"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Documents",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Systems Manager Create Document",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://ssm.amazonaws.com/#CreateDocument",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates an SSM document that describes an instance configuration, which includes the commands to run on an instance."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

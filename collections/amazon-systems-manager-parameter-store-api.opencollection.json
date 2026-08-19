@@ -1,0 +1,48 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon Systems Manager Automation Parameter Store API",
+    "version": "2014-11-06"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Parameter Store",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Systems Manager Get Parameter",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://ssm.amazonaws.com/#GetParameter",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Get information about a single parameter by specifying the parameter name."
+        },
+        {
+          "info": {
+            "name": "Amazon Systems Manager Put Parameter",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://ssm.amazonaws.com/#PutParameter",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Add a parameter to the system or update an existing parameter."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

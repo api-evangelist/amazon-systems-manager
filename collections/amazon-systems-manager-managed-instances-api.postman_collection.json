@@ -1,0 +1,115 @@
+{
+  "item": [
+    {
+      "id": "51d6f17c-da50-4a4b-8e7a-2931dbbc7456",
+      "name": "Managed Instances",
+      "description": {
+        "content": "Operations for managing instance information.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "27c436be-a776-48b1-944a-626006ae99cc",
+          "name": "Amazon Systems Manager Describe Instance Information",
+          "request": {
+            "name": "Amazon Systems Manager Describe Instance Information",
+            "description": {
+              "content": "Describes one or more of your managed instances, including information about the operating system platform, SSM Agent version, and instance status.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "hash": "DescribeInstanceInformation",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"InstanceInformationFilterList\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"MaxResults\": \"<integer>\",\n  \"NextToken\": \"<string>\"\n}"
+            }
+          },
+          "response": [
+            {
+              "id": "e65fa032-0c6e-4db3-bb6f-d202e3cf8a57",
+              "name": "Instance information.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "DescribeInstanceInformation",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"InstanceInformationFilterList\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"MaxResults\": \"<integer>\",\n  \"NextToken\": \"<string>\"\n}"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"InstanceInformationList\": [\n    {\n      \"InstanceId\": \"string\",\n      \"PingStatus\": \"string\",\n      \"PlatformType\": \"string\",\n      \"PlatformName\": \"string\",\n      \"AgentVersion\": \"string\"\n    },\n    {\n      \"InstanceId\": \"string\",\n      \"PingStatus\": \"string\",\n      \"PlatformType\": \"string\",\n      \"PlatformName\": \"string\",\n      \"AgentVersion\": \"string\"\n    }\n  ],\n  \"NextToken\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://ssm.amazonaws.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "6fe9f5cc-a26f-403e-a377-3883fbf9071b",
+    "name": "Amazon Systems Manager Automation Managed Instances API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Amazon Systems Manager is a management service that provides a unified interface for managing AWS resources, including parameter management, command execution, document management, and automation.\n\nContact Support:\n Name: Kin Lane\n Email: kin@apievangelist.com",
+      "type": "text/plain"
+    }
+  }
+}
