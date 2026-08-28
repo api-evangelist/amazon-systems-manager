@@ -3,6 +3,18 @@ description: >-
   AWS Systems Manager is an operational management service that provides a unified interface for managing AWS resources
   and on-premises infrastructure. It enables automation of operational tasks, configuration management, patch
   management, parameter storage, and run command execution across your hybrid cloud environment at scale.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 specificationVersion: '0.23'
 accessModel:
   pricing: freemium
