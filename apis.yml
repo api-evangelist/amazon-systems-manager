@@ -187,3 +187,5 @@ tags_raw:
   - AWS
   - Management
   - Operations
+x-parent: aws
+x-relationship: product
