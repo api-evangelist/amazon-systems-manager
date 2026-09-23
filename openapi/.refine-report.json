@@ -1,11 +1,7 @@
 {
   "provider": "amazon-systems-manager",
   "sources": [
-    "amazon-systems-manager-automation-api-openapi.yml",
-    "amazon-systems-manager-documents-api-openapi.yml",
-    "amazon-systems-manager-managed-instances-api-openapi.yml",
-    "amazon-systems-manager-parameter-store-api-openapi.yml",
-    "amazon-systems-manager-run-command-api-openapi.yml"
+    "_original/amazon-systems-manager-openapi.yml"
   ],
   "outputs": [
     "amazon-systems-manager-automation-api-openapi.yml",
@@ -18,12 +14,15 @@
   "errors": [],
   "warnings": [],
   "notes": [
-    "amazon-systems-manager-automation-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
-    "amazon-systems-manager-documents-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
-    "amazon-systems-manager-managed-instances-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
-    "amazon-systems-manager-parameter-store-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
-    "amazon-systems-manager-run-command-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "amazon-systems-manager-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "amazon-systems-manager-automation-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amazon-systems-manager-documents-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amazon-systems-manager-managed-instances-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amazon-systems-manager-parameter-store-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amazon-systems-manager-run-command-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

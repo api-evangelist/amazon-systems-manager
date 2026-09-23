@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Amazon Systems Manager Automation Documents API
+  title: Amazon Systems Manager Documents API
   description: Amazon Systems Manager is a management service that provides a unified interface for managing AWS resources, including parameter management, command execution, document management, and automation.
   version: '2014-11-06'
   contact:
