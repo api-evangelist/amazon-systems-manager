@@ -1,0 +1,43 @@
+slug: amazon-systems-manager
+provider: Amazon Systems Manager
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 3
+edges:
+- tag: Run Command
+  spec_file: amazon-systems-manager-run-command-api-openapi.yml
+  capability_id: BC-600.40
+  capability_id_l1: BC-600
+  capability_name: IT Operations Management
+  confidence: 0.8
+  evidence: '"SendCommand  Amazon Systems Manager Send Command", "ListCommands"'
+  reason: Remote execution of operational commands across managed infrastructure is day-to-day IT operations
+    automation.
+- tag: Automation
+  spec_file: amazon-systems-manager-automation-api-openapi.yml
+  capability_id: BC-600.40
+  capability_id_l1: BC-600
+  capability_name: IT Operations Management
+  confidence: 0.75
+  evidence: '"StartAutomationExecution"; vendor: "enables automation of operational tasks ... across your
+    hybrid cloud environment at scale"'
+  reason: Executes automation runbooks against infrastructure — day-to-day IT operations automation. Single
+    operation keeps confidence moderate.
+- tag: Parameter Store
+  spec_file: amazon-systems-manager-parameter-store-api-openapi.yml
+  capability_id: BC-4210.60
+  capability_id_l1: BC-4210
+  capability_name: Configuration & Secrets Management
+  confidence: 0.7
+  evidence: '"GetParameter", "PutParameter"; schema "Parameter"; vendor: "parameter storage"'
+  reason: Stores and retrieves runtime configuration values and secrets consumed by services — the Configuration
+    & Secrets Management capability. Not a business-domain capability.

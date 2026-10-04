@@ -124,6 +124,9 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/systems-manager/faq/
 common:
+  - type: CapabilityMap
+    url: capabilities/amazon-systems-manager-capability-edges.yml
+    name: Amazon Systems Manager Business Capability Map
   - type: PostmanWorkspace
     url: https://www.postman.com/kinlaneapi/amazon-systems-manager/overview
   - type: AgenticAccess
