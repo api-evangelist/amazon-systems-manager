@@ -1,87 +1,25 @@
-generated: '2026-07-15'
+generated: '2026-09-23'
 method: generated
-source: openapi/amazon-systems-manager-openapi.yml
+source: openapi/amazon-systems-manager-automation-api-openapi.yml, openapi/amazon-systems-manager-documents-api-openapi.yml,
+  openapi/amazon-systems-manager-managed-instances-api-openapi.yml, openapi/amazon-systems-manager-parameter-store-api-openapi.yml,
+  openapi/amazon-systems-manager-run-command-api-openapi.yml
 description: Recommended x-agentic-access execution contracts, classified heuristically from
   the OpenAPI. A governance starting point for exposing this API to AI agents — review and bind
   audience per deployment. See research/curity/agentic-governance/.
 summary:
   operations: 7
   by_action_class:
-    acting: 7
+    acting: 5
+    connected: 2
   by_consequence:
+    write: 4
+    read: 2
     physical: 1
-    write: 6
   human_in_the_loop_required: 0
 operations:
-- path: /
+- path: /#StartAutomationExecution
   method: post
-  operationId: SendCommand
-  x-agentic-access:
-    action-class: acting
-    consequence: physical
-    subject: required
-    audience: null
-    token:
-      max-ttl: 300
-      exchange: true
-      purpose-required: true
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /#ListCommands
-  method: post
-  operationId: ListCommands
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /#GetParameter
-  method: post
-  operationId: GetParameter
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /#PutParameter
-  method: post
-  operationId: PutParameter
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /#DescribeInstanceInformation
-  method: post
-  operationId: DescribeInstanceInformation
+  operationId: StartAutomationExecution
   x-agentic-access:
     action-class: acting
     consequence: write
@@ -111,9 +49,9 @@ operations:
       - abnormal
       - high-value
     audit: required
-- path: /#StartAutomationExecution
+- path: /#DescribeInstanceInformation
   method: post
-  operationId: StartAutomationExecution
+  operationId: DescribeInstanceInformation
   x-agentic-access:
     action-class: acting
     consequence: write
@@ -127,3 +65,57 @@ operations:
       - abnormal
       - high-value
     audit: required
+- path: /#GetParameter
+  method: post
+  operationId: GetParameter
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /#PutParameter
+  method: post
+  operationId: PutParameter
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /
+  method: post
+  operationId: SendCommand
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /#ListCommands
+  method: post
+  operationId: ListCommands
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
