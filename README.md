@@ -1,4 +1,4 @@
-# Amazon Systems Manager (amazon-systems-manager)
+# Amazon Systems Manager
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,67 +66,190 @@
 
 AWS Systems Manager is an operational management service that provides a unified interface for managing AWS resources and on-premises infrastructure. It enables automation of operational tasks, configuration management, patch management, parameter storage, and run command execution across your hybrid cloud environment at scale.
 
-**APIs.json:** [https://aws.amazon.com/systems-manager/](https://aws.amazon.com/systems-manager/)
+**Areas:** Automation · AWS · Management
 
-## Tags
+## Amazon Systems Manager on APIs.io
 
-- Automation
-- AWS
-- Management
-- Operations
+Everything profiled for Amazon Systems Manager is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/amazon-systems-manager/](https://apis.io/providers/amazon-systems-manager/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (23)
 
-- **Created:** 2024-01-15
-- **Modified:** 2026-05-19
+- [Amazon Systems Manager Automation API](https://apis.io/apis/amazon-systems-manager/amazon-systems-manager-automation-api/) — Operations for managing automation executions.
+- [Amazon Systems Manager Documents API](https://apis.io/apis/amazon-systems-manager/amazon-systems-manager-documents-api/) — Operations for managing SSM documents.
+- [Amazon Systems Manager Managed Instances API](https://apis.io/apis/amazon-systems-manager/amazon-systems-manager-managed-instances-api/) — Operations for managing instance information.
+- [Amazon Systems Manager Parameter Store API](https://apis.io/apis/amazon-systems-manager/amazon-systems-manager-parameter-store-api/) — Operations for managing parameters.
+- [Amazon Systems Manager Run Command API](https://apis.io/apis/amazon-systems-manager/amazon-systems-manager-run-command-api/) — Operations for running commands on managed instances.
+- [Amazon Systems Manager Systems Manager Activation API](https://apis.io/apis/amazon-systems-manager/amazon-systems-manager-activation-api/) — The Systems Manager Activation API from Amazon Systems Manager — 3 operation(s) for systems manager activation.
+- [Amazon Systems Manager Systems Manager Association API](https://apis.io/apis/amazon-systems-manager/amazon-systems-manager-association-api/) — The Systems Manager Association API from Amazon Systems Manager — 5 operation(s) for systems manager association.
+- [Amazon Systems Manager Systems Manager Automation Execution API](https://apis.io/apis/amazon-systems-manager/amazon-systems-manager-automation-execution-api/) — The Systems Manager Automation Execution API from Amazon Systems Manager — 3 operation(s) for systems manager automation execution.
+- [Amazon Systems Manager Systems Manager Cloud Connector API](https://apis.io/apis/amazon-systems-manager/amazon-systems-manager-cloud-connector-api/) — The Systems Manager Cloud Connector API from Amazon Systems Manager — 6 operation(s) for systems manager cloud connector.
+- [Amazon Systems Manager Systems Manager Inventory API](https://apis.io/apis/amazon-systems-manager/amazon-systems-manager-inventory-api/) — The Systems Manager Inventory API from Amazon Systems Manager — 3 operation(s) for systems manager inventory.
+- [Amazon Systems Manager Systems Manager Maintenance Window API](https://apis.io/apis/amazon-systems-manager/amazon-systems-manager-maintenance-window-api/) — The Systems Manager Maintenance Window API from Amazon Systems Manager — 6 operation(s) for systems manager maintenance window.
+- [Amazon Systems Manager Systems Manager Maintenance Window Execution API](https://apis.io/apis/amazon-systems-manager/amazon-systems-manager-maintenance-window-execution-api/) — The Systems Manager Maintenance Window Execution API from Amazon Systems Manager — 3 operation(s) for systems manager maintenance window execution.
+- [Amazon Systems Manager Systems Manager Maintenance Window Task API](https://apis.io/apis/amazon-systems-manager/amazon-systems-manager-maintenance-window-task-api/) — The Systems Manager Maintenance Window Task API from Amazon Systems Manager — 3 operation(s) for systems manager maintenance window task.
+- [Amazon Systems Manager Systems Manager Operations API](https://apis.io/apis/amazon-systems-manager/amazon-systems-manager-operations-api/) — The Systems Manager Operations API from Amazon Systems Manager — 68 operation(s) for systems manager operations.
+- [Amazon Systems Manager Systems Manager Ops Item API](https://apis.io/apis/amazon-systems-manager/amazon-systems-manager-ops-item-api/) — The Systems Manager Ops Item API from Amazon Systems Manager — 5 operation(s) for systems manager ops item.
+- [Amazon Systems Manager Systems Manager Ops Item Related Item API](https://apis.io/apis/amazon-systems-manager/amazon-systems-manager-ops-item-related-item-api/) — The Systems Manager Ops Item Related Item API from Amazon Systems Manager — 3 operation(s) for systems manager ops item related item.
+- [Amazon Systems Manager Systems Manager Ops Metadata API](https://apis.io/apis/amazon-systems-manager/amazon-systems-manager-ops-metadata-api/) — The Systems Manager Ops Metadata API from Amazon Systems Manager — 5 operation(s) for systems manager ops metadata.
+- [Amazon Systems Manager Systems Manager Parameter API](https://apis.io/apis/amazon-systems-manager/amazon-systems-manager-parameter-api/) — The Systems Manager Parameter API from Amazon Systems Manager — 5 operation(s) for systems manager parameter.
+- [Amazon Systems Manager Systems Manager Patch Baseline API](https://apis.io/apis/amazon-systems-manager/amazon-systems-manager-patch-baseline-api/) — The Systems Manager Patch Baseline API from Amazon Systems Manager — 8 operation(s) for systems manager patch baseline.
+- [Amazon Systems Manager Systems Manager Resource Data Sync API](https://apis.io/apis/amazon-systems-manager/amazon-systems-manager-resource-data-sync-api/) — The Systems Manager Resource Data Sync API from Amazon Systems Manager — 4 operation(s) for systems manager resource data sync.
+- [Amazon Systems Manager Systems Manager Resource Policy API](https://apis.io/apis/amazon-systems-manager/amazon-systems-manager-resource-policy-api/) — The Systems Manager Resource Policy API from Amazon Systems Manager — 3 operation(s) for systems manager resource policy.
+- [Amazon Systems Manager Systems Manager Service Setting API](https://apis.io/apis/amazon-systems-manager/amazon-systems-manager-service-setting-api/) — The Systems Manager Service Setting API from Amazon Systems Manager — 3 operation(s) for systems manager service setting.
+- [Amazon Systems Manager Systems Manager Tag API](https://apis.io/apis/amazon-systems-manager/amazon-systems-manager-tag-api/) — The Systems Manager Tag API from Amazon Systems Manager — 3 operation(s) for systems manager tag.
 
-## APIs
+### Published properties
 
-### AWS Systems Manager API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-The AWS Systems Manager API provides programmatic access to manage and automate operational tasks across your AWS and on-premises infrastructure. It enables developers to run commands on managed instances, manage parameters and secrets, create automation documents, configure patch baselines, manage inventory, and set up maintenance windows.
+#### Agentic access (1)
 
-- **Human URL:** [https://aws.amazon.com/systems-manager/](https://aws.amazon.com/systems-manager/)
-- **Base URL:** `https://ssm.amazonaws.com`
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags
+- [Amazon Systems Manager Agentic Access](https://apis.io/agentic-access/amazon-systems-manager/amazon-systems-manager-agentic-access/)
 
-- Automation
-- AWS
-- Management
-- Operations
+#### JSON Schema (1)
 
-#### Properties
+The data models the API reads and writes.
 
-- [Documentation](https://docs.aws.amazon.com/systems-manager/)
-- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/amazon-systems-manager/refs/heads/main/openapi/amazon-systems-manager-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Pricing](https://aws.amazon.com/systems-manager/pricing/)
-- [Getting Started](https://aws.amazon.com/systems-manager/getting-started/)
-- [F A Q](https://aws.amazon.com/systems-manager/faq/)
-- [Postman Collection](collections/amazon-systems-manager.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/amazon-systems-manager.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Parameter](https://apis.io/schemas/amazon-systems-manager/amazon-systems-manager-parameter/)
 
-## Common Properties
+#### JSON Structure (1)
 
-- [Portal](https://aws.amazon.com/)
+Data models expressed in JSON Structure.
+
+- [Amazon Systems Manager Parameter Structure](https://apis.io/json-structure/amazon-systems-manager/amazon-systems-manager-parameter-structure/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Amazon Systems Manager Context](https://apis.io/jsonld/amazon-systems-manager/amazon-systems-manager-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Amazon Systems Manager Vocabulary](https://apis.io/vocabularies/amazon-systems-manager/amazon-systems-manager-vocabulary/)
+
+#### Examples (1)
+
+Example requests and responses.
+
+- [Amazon Systems Manager Example](https://apis.io/examples/amazon-systems-manager/amazon-systems-manager-example/)
+
+#### Collections (11)
+
+Postman and Open Collection request collections.
+
+- [Amazon Systems Manager](https://apis.io/collections/amazon-systems-manager/open-amazon-systems-manager/)
+- [Amazon Systems Manager Automation API](https://apis.io/collections/amazon-systems-manager/open-amazon-systems-manager-automation-api/)
+- [Amazon Systems Manager Automation Documents API](https://apis.io/collections/amazon-systems-manager/open-amazon-systems-manager-documents-api/)
+- [Amazon Systems Manager Automation Managed Instances API](https://apis.io/collections/amazon-systems-manager/open-amazon-systems-manager-managed-instances-api/)
+- [Amazon Systems Manager Automation Parameter Store API](https://apis.io/collections/amazon-systems-manager/open-amazon-systems-manager-parameter-store-api/)
+- [Amazon Systems Manager Automation Run Command API](https://apis.io/collections/amazon-systems-manager/open-amazon-systems-manager-run-command-api/)
+- [Amazon Systems Manager Automation API](https://apis.io/collections/amazon-systems-manager/postman-amazon-systems-manager-automation-api/)
+- [Amazon Systems Manager Automation Documents API](https://apis.io/collections/amazon-systems-manager/postman-amazon-systems-manager-documents-api/)
+- [Amazon Systems Manager Automation Managed Instances API](https://apis.io/collections/amazon-systems-manager/postman-amazon-systems-manager-managed-instances-api/)
+- [Amazon Systems Manager Automation Parameter Store API](https://apis.io/collections/amazon-systems-manager/postman-amazon-systems-manager-parameter-store-api/)
+- [Amazon Systems Manager Automation Run Command API](https://apis.io/collections/amazon-systems-manager/postman-amazon-systems-manager-run-command-api/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Amazon Systems Manager — jsonschema rules](https://apis.io/rules/amazon-systems-manager/amazon-systems-manager-jsonschema-spectral-rules/)
+- [Amazon Systems Manager API Rules](https://apis.io/rules/amazon-systems-manager/amazon-systems-manager-spectral-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Amazon Systems Manager Domain Security](https://apis.io/security/amazon-systems-manager/amazon-systems-manager-domain-security/)
+- [Amazon Systems Manager Trust Center](https://apis.io/security/amazon-systems-manager/amazon-systems-manager-trust-center/)
+- [Amazon Systems Manager Vulnerability Disclosure](https://apis.io/security/amazon-systems-manager/amazon-systems-manager-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Amazon Systems Manager Plans Pricing](https://apis.io/plans/amazon-systems-manager/amazon-systems-manager-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Amazon Systems Manager Rate Limits](https://apis.io/rate-limits/amazon-systems-manager/amazon-systems-manager-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Amazon Systems Manager Finops](https://apis.io/finops/amazon-systems-manager/amazon-systems-manager-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://aws.amazon.com/systems-manager/)
 - [Documentation](https://docs.aws.amazon.com/systems-manager/)
-- [Terms of Service](https://aws.amazon.com/service-terms/)
-- [Privacy Policy](https://aws.amazon.com/privacy/)
 - [Support](https://aws.amazon.com/premiumsupport/)
-- [GitHub Organization](https://github.com/aws)
-- [Console](https://console.aws.amazon.com/systems-manager/)
-- [Sign Up](https://signin.aws.amazon.com/signup?request_type=register)
-- [Login](https://aws.amazon.com/console/)
-- [Status Page](https://health.aws.amazon.com/health/status)
-- [Contact](https://aws.amazon.com/contact-us/)
-- [Spectral Rules](https://raw.githubusercontent.com/api-evangelist/amazon-systems-manager/refs/heads/main/rules/amazon-systems-manager-spectral-rules.yml)
-- [Vocabulary](https://raw.githubusercontent.com/api-evangelist/amazon-systems-manager/refs/heads/main/vocabulary/amazon-systems-manager-vocabulary.yaml)
-- [Features](undefined)
-- [Use Cases](undefined)
+- [Terms of service](https://aws.amazon.com/service-terms/)
+- [Privacy policy](https://aws.amazon.com/privacy/)
+- [GitHub](https://github.com/aws)
+- [Status](https://health.aws.amazon.com/health/status)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
-**URL:** https://apievangelist.com
+**Kin Score 47.6** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 43.8 |
+| Contract governance | 27.3 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 44.0 |
+| Access clarity | 53.9 |
+
+**Agent readiness 17.2** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 29.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/amazon-systems-manager/](https://apis.io/providers/amazon-systems-manager/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Amazon Systems Manager: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/amazon-systems-manager/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
