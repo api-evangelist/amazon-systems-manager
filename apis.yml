@@ -1,0 +1,415 @@
+name: Amazon Systems Manager
+description: >-
+  AWS Systems Manager is an operational management service that provides a unified interface for managing AWS resources
+  and on-premises infrastructure. It enables automation of operational tasks, configuration management, patch
+  management, parameter storage, and run command execution across your hybrid cloud environment at scale.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
+specificationVersion: '0.23'
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+url: https://aws.amazon.com/systems-manager/
+created: '2024-01-15'
+modified: '2026-05-19'
+apis:
+- aid: amazon-systems-manager:amazon-systems-manager-automation-api
+  name: Amazon Systems Manager Automation API
+  description: Operations for managing automation executions.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Automation
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-automation-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/systems-manager/
+  - type: Pricing
+    url: https://aws.amazon.com/systems-manager/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/systems-manager/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/systems-manager/faq/
+- aid: amazon-systems-manager:amazon-systems-manager-documents-api
+  name: Amazon Systems Manager Documents API
+  description: Operations for managing SSM documents.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Documents
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-documents-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/systems-manager/
+  - type: Pricing
+    url: https://aws.amazon.com/systems-manager/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/systems-manager/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/systems-manager/faq/
+- aid: amazon-systems-manager:amazon-systems-manager-managed-instances-api
+  name: Amazon Systems Manager Managed Instances API
+  description: Operations for managing instance information.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Managed Instances
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-managed-instances-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/systems-manager/
+  - type: Pricing
+    url: https://aws.amazon.com/systems-manager/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/systems-manager/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/systems-manager/faq/
+- aid: amazon-systems-manager:amazon-systems-manager-parameter-store-api
+  name: Amazon Systems Manager Parameter Store API
+  description: Operations for managing parameters.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Parameter Store
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-parameter-store-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/systems-manager/
+  - type: Pricing
+    url: https://aws.amazon.com/systems-manager/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/systems-manager/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/systems-manager/faq/
+- aid: amazon-systems-manager:amazon-systems-manager-run-command-api
+  name: Amazon Systems Manager Run Command API
+  description: Operations for running commands on managed instances.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Run Command
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-run-command-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/systems-manager/
+  - type: Pricing
+    url: https://aws.amazon.com/systems-manager/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/systems-manager/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/systems-manager/faq/
+- aid: amazon-systems-manager:amazon-systems-manager-activation-api
+  name: Amazon Systems Manager Systems Manager Activation API
+  description: >-
+    The Systems Manager Activation API from Amazon Systems Manager — 3 operation(s) for systems manager
+    activation.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Systems Manager Activation
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-activation-api-openapi.yml
+- aid: amazon-systems-manager:amazon-systems-manager-association-api
+  name: Amazon Systems Manager Systems Manager Association API
+  description: >-
+    The Systems Manager Association API from Amazon Systems Manager — 5 operation(s) for systems manager
+    association.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Systems Manager Association
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-association-api-openapi.yml
+- aid: amazon-systems-manager:amazon-systems-manager-automation-execution-api
+  name: Amazon Systems Manager Systems Manager Automation Execution API
+  description: >-
+    The Systems Manager Automation Execution API from Amazon Systems Manager — 3 operation(s) for systems
+    manager automation execution.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Systems Manager Automation Execution
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-automation-execution-api-openapi.yml
+- aid: amazon-systems-manager:amazon-systems-manager-cloud-connector-api
+  name: Amazon Systems Manager Systems Manager Cloud Connector API
+  description: >-
+    The Systems Manager Cloud Connector API from Amazon Systems Manager — 6 operation(s) for systems manager
+    cloud connector.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Systems Manager Cloud Connector
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-cloud-connector-api-openapi.yml
+- aid: amazon-systems-manager:amazon-systems-manager-inventory-api
+  name: Amazon Systems Manager Systems Manager Inventory API
+  description: >-
+    The Systems Manager Inventory API from Amazon Systems Manager — 3 operation(s) for systems manager
+    inventory.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Systems Manager Inventory
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-inventory-api-openapi.yml
+- aid: amazon-systems-manager:amazon-systems-manager-maintenance-window-api
+  name: Amazon Systems Manager Systems Manager Maintenance Window API
+  description: >-
+    The Systems Manager Maintenance Window API from Amazon Systems Manager — 6 operation(s) for systems
+    manager maintenance window.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Systems Manager Maintenance Window
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-maintenance-window-api-openapi.yml
+- aid: amazon-systems-manager:amazon-systems-manager-maintenance-window-execution-api
+  name: Amazon Systems Manager Systems Manager Maintenance Window Execution API
+  description: >-
+    The Systems Manager Maintenance Window Execution API from Amazon Systems Manager — 3 operation(s)
+    for systems manager maintenance window execution.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Systems Manager Maintenance Window Execution
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-maintenance-window-execution-api-openapi.yml
+- aid: amazon-systems-manager:amazon-systems-manager-maintenance-window-task-api
+  name: Amazon Systems Manager Systems Manager Maintenance Window Task API
+  description: >-
+    The Systems Manager Maintenance Window Task API from Amazon Systems Manager — 3 operation(s) for systems
+    manager maintenance window task.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Systems Manager Maintenance Window Task
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-maintenance-window-task-api-openapi.yml
+- aid: amazon-systems-manager:amazon-systems-manager-operations-api
+  name: Amazon Systems Manager Systems Manager Operations API
+  description: >-
+    The Systems Manager Operations API from Amazon Systems Manager — 68 operation(s) for systems manager
+    operations.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Systems Manager Operations
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-operations-api-openapi.yml
+- aid: amazon-systems-manager:amazon-systems-manager-ops-item-api
+  name: Amazon Systems Manager Systems Manager Ops Item API
+  description: >-
+    The Systems Manager Ops Item API from Amazon Systems Manager — 5 operation(s) for systems manager
+    ops item.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Systems Manager Ops Item
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-ops-item-api-openapi.yml
+- aid: amazon-systems-manager:amazon-systems-manager-ops-item-related-item-api
+  name: Amazon Systems Manager Systems Manager Ops Item Related Item API
+  description: >-
+    The Systems Manager Ops Item Related Item API from Amazon Systems Manager — 3 operation(s) for systems
+    manager ops item related item.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Systems Manager Ops Item Related Item
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-ops-item-related-item-api-openapi.yml
+- aid: amazon-systems-manager:amazon-systems-manager-ops-metadata-api
+  name: Amazon Systems Manager Systems Manager Ops Metadata API
+  description: >-
+    The Systems Manager Ops Metadata API from Amazon Systems Manager — 5 operation(s) for systems manager
+    ops metadata.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Systems Manager Ops Metadata
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-ops-metadata-api-openapi.yml
+- aid: amazon-systems-manager:amazon-systems-manager-parameter-api
+  name: Amazon Systems Manager Systems Manager Parameter API
+  description: >-
+    The Systems Manager Parameter API from Amazon Systems Manager — 5 operation(s) for systems manager
+    parameter.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Systems Manager Parameter
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-parameter-api-openapi.yml
+- aid: amazon-systems-manager:amazon-systems-manager-patch-baseline-api
+  name: Amazon Systems Manager Systems Manager Patch Baseline API
+  description: >-
+    The Systems Manager Patch Baseline API from Amazon Systems Manager — 8 operation(s) for systems manager
+    patch baseline.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Systems Manager Patch Baseline
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-patch-baseline-api-openapi.yml
+- aid: amazon-systems-manager:amazon-systems-manager-resource-data-sync-api
+  name: Amazon Systems Manager Systems Manager Resource Data Sync API
+  description: >-
+    The Systems Manager Resource Data Sync API from Amazon Systems Manager — 4 operation(s) for systems
+    manager resource data sync.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Systems Manager Resource Data Sync
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-resource-data-sync-api-openapi.yml
+- aid: amazon-systems-manager:amazon-systems-manager-resource-policy-api
+  name: Amazon Systems Manager Systems Manager Resource Policy API
+  description: >-
+    The Systems Manager Resource Policy API from Amazon Systems Manager — 3 operation(s) for systems manager
+    resource policy.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Systems Manager Resource Policy
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-resource-policy-api-openapi.yml
+- aid: amazon-systems-manager:amazon-systems-manager-service-setting-api
+  name: Amazon Systems Manager Systems Manager Service Setting API
+  description: >-
+    The Systems Manager Service Setting API from Amazon Systems Manager — 3 operation(s) for systems manager
+    service setting.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Systems Manager Service Setting
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-service-setting-api-openapi.yml
+- aid: amazon-systems-manager:amazon-systems-manager-tag-api
+  name: Amazon Systems Manager Systems Manager Tag API
+  description: >-
+    The Systems Manager Tag API from Amazon Systems Manager — 3 operation(s) for systems manager tag.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Systems Manager Tag
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-tag-api-openapi.yml
+common:
+  - type: Plans
+    url: plans/amazon-systems-manager-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/amazon-systems-manager-rate-limits.yml
+  - type: FinOps
+    url: finops/amazon-systems-manager-finops.yml
+  - type: CapabilityMap
+    url: capabilities/amazon-systems-manager-capability-edges.yml
+    name: Amazon Systems Manager Business Capability Map
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/amazon-systems-manager/overview
+  - type: AgenticAccess
+    url: agentic-access/amazon-systems-manager-agentic-access.yml
+  - type: TrustCenter
+    url: security/amazon-systems-manager-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/amazon-systems-manager-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/amazon-systems-manager-domain-security.yml
+  - type: Portal
+    url: https://aws.amazon.com/
+  - type: Website
+    url: https://aws.amazon.com/systems-manager/
+  - type: Documentation
+    url: https://docs.aws.amazon.com/systems-manager/
+  - type: TermsOfService
+    url: https://aws.amazon.com/service-terms/
+  - type: PrivacyPolicy
+    url: https://aws.amazon.com/privacy/
+  - type: Support
+    url: https://aws.amazon.com/premiumsupport/
+  - type: GitHubOrganization
+    url: https://github.com/aws
+  - type: Console
+    url: https://console.aws.amazon.com/systems-manager/
+  - type: Signup
+    url: https://signin.aws.amazon.com/signup?request_type=register
+  - type: Login
+    url: https://aws.amazon.com/console/
+  - type: StatusPage
+    url: https://health.aws.amazon.com/health/status
+  - type: Contact
+    url: https://aws.amazon.com/contact-us/
+  - type: SpectralRules
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/amazon-systems-manager/refs/heads/main/rules/amazon-systems-manager-spectral-rules.yml
+  - type: Vocabulary
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/amazon-systems-manager/refs/heads/main/vocabulary/amazon-systems-manager-vocabulary.yaml
+  - type: Features
+    data:
+      - name: Automation
+        description: Automate operational tasks with Amazon Systems Manager.
+      - name: API Access
+        description: Programmatic access to Amazon Systems Manager resources.
+  - type: UseCases
+    data:
+      - name: Cloud Operations
+        description: Use Amazon Systems Manager to manage and automate cloud operations.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+    url: https://apievangelist.com
+tags:
+  - Automation
+  - Amazon Web Services
+  - Management
+tags_raw:
+  - Automation
+  - AWS
+  - Management
+  - Operations
+x-parent: amazon-web-services
+x-relationship: product
