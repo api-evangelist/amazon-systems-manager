@@ -126,7 +126,7 @@ plans:
 rate_limit_statements:
 - Limits may apply .
 x-canonical:
-  generated: '2026-11-02'
+  generated: '2026-11-06'
   vocabulary: engine/economics/plans-canonical.yml
   models:
   - hybrid
@@ -243,10 +243,10 @@ x-canonical:
     - other
   - name: Hybrid/Multicloud Run Command (effective September 30, 2026)
     access: other
-    model: subscription
+    model: hybrid
     model_how: derived
     units:
-    - other
+    - request
     periods:
     - other
   - name: Distributor AWS packages
