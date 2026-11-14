@@ -5,9 +5,27 @@ artifacts:
   agentic-access/amazon-systems-manager-agentic-access.yml:
     method: generated
     evidence: declared in the artifact
+  ai-preferences/amazon-systems-manager-ai-preferences.yml:
+    method: harvested
+    evidence: declared in the artifact
+  authentication/amazon-systems-manager-authentication.yml:
+    method: derived
+    evidence: declared in the artifact
   capabilities/amazon-systems-manager-capability-edges.yml:
     method: unknown
     evidence: no authorship recorded
+  certification/observations-2026-11-11.jsonl:
+    method: unknown
+    evidence: no authorship recorded
+  certification/status.yml:
+    method: unknown
+    evidence: no authorship recorded
+  changelog/amazon-systems-manager-changelog.yml:
+    method: searched
+    evidence: declared in the artifact
+  cli/amazon-systems-manager-cli.yml:
+    method: searched
+    evidence: declared in the artifact
   collections/amazon-systems-manager-automation-api.opencollection.json:
     method: derived
     evidence: openapi/amazon-systems-manager-automation-api
@@ -44,6 +62,21 @@ artifacts:
   collections/amazon-systems-manager.postman_collection.json:
     method: derived
     evidence: openapi/amazon-systems-manager
+  compliance/amazon-systems-manager-compliance.yml:
+    method: harvested
+    evidence: declared in the artifact
+  conformance/amazon-systems-manager-conformance.yml:
+    method: derived
+    evidence: declared in the artifact
+  conventions/amazon-systems-manager-conventions.yml:
+    method: derived
+    evidence: declared in the artifact
+  data-model/amazon-systems-manager-data-model.yml:
+    method: derived
+    evidence: declared in the artifact
+  errors/amazon-systems-manager-problem-types.yml:
+    method: searched
+    evidence: declared in the artifact
   examples/amazon-systems-manager-example.json:
     method: unknown
     evidence: no authorship recorded
@@ -53,6 +86,9 @@ artifacts:
   front-door-ai/2026-09-17.yml:
     method: unknown
     evidence: no authorship recorded
+  hosts/amazon-systems-manager-hosts.yml:
+    method: derived
+    evidence: declared in the artifact
   integrations/_index.yml:
     method: generated
     evidence: carries an API Evangelist house phrase
@@ -62,7 +98,556 @@ artifacts:
   json-ld/amazon-systems-manager-context.jsonld:
     method: unknown
     evidence: no authorship recorded
+  json-schema/amazon-systems-manager-add-tags-to-resource-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-appconfig-application-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-appconfig-tag-resource-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-applications-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-associate-ops-item-related-item-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-associate-ops-item-related-item-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-cancel-maintenance-window-execution-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-cancel-maintenance-window-execution-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-configuration-profile-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-create-activation-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-create-activation-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-create-application-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-create-association-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-create-cloud-connector-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-create-configuration-manager-input-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-create-configuration-manager-output-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-create-configuration-profile-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-create-deployment-strategy-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-create-document-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-create-environment-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-create-experiment-definition-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-create-extension-association-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-create-extension-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-create-hosted-configuration-version-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-create-maintenance-window-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-create-ops-item-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-create-ops-item-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-create-ops-metadata-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-create-patch-baseline-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-create-resource-data-sync-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-create-resource-data-sync-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-delete-activation-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-delete-activation-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-delete-association-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-delete-configuration-manager-input-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-delete-configuration-profile-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-delete-document-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-delete-environment-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-delete-experiment-definition-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-delete-extension-association-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-delete-hosted-configuration-version-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-delete-inventory-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-delete-inventory-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-delete-resource-data-sync-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-delete-resource-policy-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-delete-resource-policy-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-deployment-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-deployment-strategies-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-deployment-strategy-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-deployments-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-deregister-managed-instance-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-deregister-managed-instance-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-describe-activations-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-describe-activations-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-describe-association-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-describe-automation-executions-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-describe-automation-executions-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-describe-instance-information-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-describe-instance-information-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-describe-maintenance-window-executions-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-describe-maintenance-window-executions-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-describe-maintenance-window-tasks-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-describe-maintenance-window-tasks-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-describe-maintenance-windows-for-target-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-describe-maintenance-windows-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-describe-ops-items-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-describe-ops-items-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-describe-parameters-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-describe-patch-baselines-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-describe-patch-group-state-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-disassociate-ops-item-related-item-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-disassociate-ops-item-related-item-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-environment-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-environments-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-experiment-definition-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-experiment-run-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-experiment-runs-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-extension-association-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-extension-associations-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-application-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-automation-execution-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-cloud-connector-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-command-invocation-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-configuration-manager-input-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-configuration-manager-output-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-configuration-profile-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-deployment-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-deployment-strategy-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-document-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-document-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-experiment-definition-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-experiment-run-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-hosted-configuration-version-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-inventory-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-inventory-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-maintenance-window-execution-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-maintenance-window-execution-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-maintenance-window-execution-task-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-maintenance-window-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-maintenance-window-task-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-maintenance-window-task-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-ops-item-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-ops-metadata-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-ops-metadata-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-parameter-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-parameter-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-parameters-by-path-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-parameters-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-patch-baseline-for-patch-group-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-patch-baseline-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-resource-policies-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-resource-policies-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-service-setting-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-service-setting-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-get-service-settings-output-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-hosted-configuration-version-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-hosted-configuration-versions-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-list-applications-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-list-associations-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-list-associations-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-list-cloud-connectors-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-list-commands-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-list-commands-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-list-configuration-profiles-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-list-deployment-strategies-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-list-deployments-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-list-documents-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-list-environments-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-list-experiment-definitions-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-list-experiment-runs-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-list-extension-associations-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-list-hosted-configuration-versions-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-list-ops-item-related-items-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-list-ops-item-related-items-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-list-ops-metadata-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-list-ops-metadata-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-list-resource-data-sync-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-list-resource-data-sync-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-list-tags-for-resource-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
   json-schema/amazon-systems-manager-parameter-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-put-compliance-items-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-put-inventory-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-put-inventory-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-put-parameter-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-put-parameter-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-put-resource-policy-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-put-resource-policy-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-register-task-with-maintenance-window-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-remove-tags-from-resource-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-reset-service-setting-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-send-command-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-send-command-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-start-automation-execution-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-start-automation-execution-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-start-change-request-execution-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-start-deployment-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-start-experiment-run-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-stop-automation-execution-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-stop-deployment-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-tag-resource-input-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-untag-resource-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-update-application-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-update-association-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-update-cloud-connector-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-update-configuration-manager-input-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-update-configuration-profile-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-update-deployment-strategy-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-update-document-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-update-environment-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-update-experiment-definition-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-update-extension-association-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-update-maintenance-window-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-update-maintenance-window-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-update-maintenance-window-task-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-update-maintenance-window-task-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-update-ops-item-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-update-ops-metadata-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-update-patch-baseline-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-update-patch-baseline-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-update-resource-data-sync-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-update-service-setting-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-update-service-settings-input-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-validate-cloud-connector-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-systems-manager-validate-cloud-connector-result-schema.json:
     method: unknown
     evidence: no authorship recorded
   json-structure/amazon-systems-manager-parameter-structure.json:
@@ -71,7 +656,7 @@ artifacts:
   kin/checks-2026-10-23T222754.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  kin/checks-2026-11-02T082323.yml:
+  kin/checks-2026-11-06T143934.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-09-23T000603.yml:
@@ -140,26 +725,70 @@ artifacts:
   kin/score-2026-11-02T082323.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  openapi/_original/amazon-systems-manager-openapi.yml:
-    method: harvested
-    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
-      to the provider's source is unverified
+  kin/score-2026-11-06T143934.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  lifecycle/amazon-systems-manager-lifecycle.yml:
+    method: searched
+    evidence: declared in the artifact
+  llms/amazon-systems-manager-llms-provenance.yml:
+    method: unknown
+    evidence: no authorship recorded
+  llms/amazon-systems-manager-llms.txt:
+    method: unknown
+    evidence: no authorship recorded
+  mcp/amazon-systems-manager-mcp.yml:
+    method: searched
+    evidence: declared in the artifact
   openapi/amazon-systems-manager-activation-api-openapi.yml:
+    method: unknown
+    evidence: no authorship recorded
+  openapi/amazon-systems-manager-applications-api-openapi.yml:
     method: unknown
     evidence: no authorship recorded
   openapi/amazon-systems-manager-association-api-openapi.yml:
     method: unknown
     evidence: no authorship recorded
   openapi/amazon-systems-manager-automation-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
+    method: unknown
+    evidence: no authorship recorded
   openapi/amazon-systems-manager-automation-execution-api-openapi.yml:
     method: unknown
     evidence: no authorship recorded
   openapi/amazon-systems-manager-cloud-connector-api-openapi.yml:
     method: unknown
     evidence: no authorship recorded
+  openapi/amazon-systems-manager-configurationmanager-api-openapi.yml:
+    method: unknown
+    evidence: no authorship recorded
+  openapi/amazon-systems-manager-configurationprofiles-api-openapi.yml:
+    method: unknown
+    evidence: no authorship recorded
+  openapi/amazon-systems-manager-deployments-api-openapi.yml:
+    method: unknown
+    evidence: no authorship recorded
+  openapi/amazon-systems-manager-deploymentstrategies-api-openapi.yml:
+    method: unknown
+    evidence: no authorship recorded
   openapi/amazon-systems-manager-documents-api-openapi.yml:
+    method: unknown
+    evidence: no authorship recorded
+  openapi/amazon-systems-manager-environments-api-openapi.yml:
+    method: unknown
+    evidence: no authorship recorded
+  openapi/amazon-systems-manager-experimentdefinitions-api-openapi.yml:
+    method: unknown
+    evidence: no authorship recorded
+  openapi/amazon-systems-manager-experimentruns-api-openapi.yml:
+    method: unknown
+    evidence: no authorship recorded
+  openapi/amazon-systems-manager-extensionassociations-api-openapi.yml:
+    method: unknown
+    evidence: no authorship recorded
+  openapi/amazon-systems-manager-extensions-api-openapi.yml:
+    method: unknown
+    evidence: no authorship recorded
+  openapi/amazon-systems-manager-hostedconfigurationversions-api-openapi.yml:
     method: unknown
     evidence: no authorship recorded
   openapi/amazon-systems-manager-inventory-api-openapi.yml:
@@ -193,8 +822,8 @@ artifacts:
     method: unknown
     evidence: no authorship recorded
   openapi/amazon-systems-manager-parameter-store-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
+    method: unknown
+    evidence: no authorship recorded
   openapi/amazon-systems-manager-patch-baseline-api-openapi.yml:
     method: unknown
     evidence: no authorship recorded
@@ -213,6 +842,12 @@ artifacts:
   openapi/amazon-systems-manager-tag-api-openapi.yml:
     method: unknown
     evidence: no authorship recorded
+  packages/amazon-systems-manager-packages.yml:
+    method: searched
+    evidence: declared in the artifact
+  patterns/amazon-systems-manager-patterns.yml:
+    method: derived
+    evidence: declared in the artifact
   plans/amazon-systems-manager-plans-pricing.yml:
     method: searched
     evidence: declared in the artifact
@@ -234,10 +869,16 @@ artifacts:
   postman/amazon-systems-manager-run-command-api.postman_collection.json:
     method: derived
     evidence: openapi/amazon-systems-manager-run-command-api
+  privacy/amazon-systems-manager-privacy-policy.yml:
+    method: harvested
+    evidence: declared in the artifact
   rate-limits/amazon-systems-manager-rate-limits.yml:
     method: generated
     evidence: declared in the artifact
   rules/amazon-systems-manager-jsonschema-spectral-rules.yml:
+    method: generated
+    evidence: declared in the artifact
+  rules/amazon-systems-manager-rules.yml:
     method: generated
     evidence: declared in the artifact
   rules/amazon-systems-manager-spectral-rules.yml:
@@ -255,9 +896,48 @@ artifacts:
   sla/amazon-systems-manager-sla.yml:
     method: generated
     evidence: declared in the artifact
+  smithy/appconfig-2019-10-09.json:
+    method: harvested
+    evidence: byte-identical to https://raw.githubusercontent.com/aws/api-models-aws/3cd98287b471c106254abd89279cc87308d38bfd/models/appconfig/service/2019-10-09/appconfig-2019-10-09.json
+      (sha256 ae80951fcaa0, fetched 2026-11-11T21:15:50+00:00)
+  smithy/appconfigdata-2021-11-11.json:
+    method: harvested
+    evidence: byte-identical to https://raw.githubusercontent.com/aws/api-models-aws/3cd98287b471c106254abd89279cc87308d38bfd/models/appconfigdata/service/2021-11-11/appconfigdata-2021-11-11.json
+      (sha256 e7dc8590733a, fetched 2026-11-11T21:15:50+00:00)
   smithy/ssm-2014-11-06.json:
+    method: harvested
+    evidence: byte-identical to https://raw.githubusercontent.com/aws/api-models-aws/3cd98287b471c106254abd89279cc87308d38bfd/models/ssm/service/2014-11-06/ssm-2014-11-06.json
+      (sha256 93aa900468d4, fetched 2026-11-11T21:15:46+00:00)
+  smithy/ssm-guiconnect-2021-05-01.json:
+    method: harvested
+    evidence: byte-identical to https://raw.githubusercontent.com/aws/api-models-aws/3cd98287b471c106254abd89279cc87308d38bfd/models/ssm-guiconnect/service/2021-05-01/ssm-guiconnect-2021-05-01.json
+      (sha256 185d4b9f576b, fetched 2026-11-11T21:15:47+00:00)
+  smithy/ssm-quicksetup-2018-05-10.json:
+    method: harvested
+    evidence: byte-identical to https://raw.githubusercontent.com/aws/api-models-aws/3cd98287b471c106254abd89279cc87308d38bfd/models/ssm-quicksetup/service/2018-05-10/ssm-quicksetup-2018-05-10.json
+      (sha256 faa363535a43, fetched 2026-11-11T21:15:48+00:00)
+  smithy/ssm-sap-2018-05-10.json:
+    method: harvested
+    evidence: byte-identical to https://raw.githubusercontent.com/aws/api-models-aws/3cd98287b471c106254abd89279cc87308d38bfd/models/ssm-sap/service/2018-05-10/ssm-sap-2018-05-10.json
+      (sha256 49c0aaa50a2e, fetched 2026-11-11T21:15:49+00:00)
+  terms/amazon-systems-manager-terms-of-service.yml:
+    method: harvested
+    evidence: declared in the artifact
+  vendors/amazon-systems-manager-vendors.yml:
     method: unknown
     evidence: no authorship recorded
   vocabulary/amazon-systems-manager-vocabulary.yaml:
+    method: unknown
+    evidence: no authorship recorded
+  vocabulary/amazon-systems-manager-vocabulary.yml:
+    method: derived
+    evidence: declared in the artifact
+  well-known/amazon-systems-manager-midway-auth-openid-configuration.json:
+    method: unknown
+    evidence: no authorship recorded
+  well-known/amazon-systems-manager-security.txt:
+    method: unknown
+    evidence: no authorship recorded
+  well-known/amazon-systems-manager-well-known.yml:
     method: unknown
     evidence: no authorship recorded

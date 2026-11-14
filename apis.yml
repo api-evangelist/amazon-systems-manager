@@ -1,8 +1,7 @@
 name: Amazon Systems Manager
-description: >-
-  AWS Systems Manager is an operational management service that provides a unified interface for managing AWS resources
-  and on-premises infrastructure. It enables automation of operational tasks, configuration management, patch
-  management, parameter storage, and run command execution across your hybrid cloud environment at scale.
+description: AWS Systems Manager is an operational management service that provides a unified interface for managing AWS resources and on-premises
+  infrastructure. It enables automation of operational tasks, configuration management, patch management, parameter storage, and run command execution
+  across your hybrid cloud environment at scale.
 deliveryModel:
   model: saas
   open_source: false
@@ -23,16 +22,143 @@ accessModel:
   try_now: false
   public: false
   label: Paid
-  confidence: low
+  confidence: medium
   source:
   - plans
+  - authentication
   - security
-  generated: '2026-11-06'
+  generated: '2026-11-13'
   method: derived
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
 url: https://aws.amazon.com/systems-manager/
 created: '2024-01-15'
 modified: '2026-05-19'
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+  url: https://apievangelist.com
+tags:
+- Automation
+- Amazon Web Services
+- Management
+tags_raw:
+- Automation
+- AWS
+- Management
+common:
+- type: GettingStarted
+  url: https://developer.amazon.com/frustration-free-setup
+- type: Spectral
+  url: rules/amazon-systems-manager-spectral-rules.yml
+- type: Spectral
+  url: rules/amazon-systems-manager-rules.yml
+- type: Spectral
+  url: rules/amazon-systems-manager-jsonschema-spectral-rules.yml
+- type: JSONLD
+  url: json-ld/amazon-systems-manager-context.jsonld
+- type: Vocabulary
+  url: vocabulary/amazon-systems-manager-vocabulary.yml
+- type: DataModel
+  url: data-model/amazon-systems-manager-data-model.yml
+- type: CLI
+  url: cli/amazon-systems-manager-cli.yml
+- type: ChangeLog
+  url: changelog/amazon-systems-manager-changelog.yml
+- type: Idempotency
+  url: conventions/amazon-systems-manager-conventions.yml
+- type: Conventions
+  url: conventions/amazon-systems-manager-conventions.yml
+- type: Compliance
+  url: https://aws.amazon.com/compliance/
+- type: Lifecycle
+  url: lifecycle/amazon-systems-manager-lifecycle.yml
+- type: ErrorCatalog
+  url: errors/amazon-systems-manager-problem-types.yml
+- type: Conformance
+  url: conformance/amazon-systems-manager-conformance.yml
+- type: LLMsTxt
+  url: llms/amazon-systems-manager-llms.txt
+- type: MCPServer
+  url: mcp/amazon-systems-manager-mcp.yml
+- type: SecurityTxt
+  url: well-known/amazon-systems-manager-security.txt
+- type: WellKnown
+  url: well-known/amazon-systems-manager-well-known.yml
+- type: Hosts
+  url: hosts/amazon-systems-manager-hosts.yml
+- type: Vendors
+  url: vendors/amazon-systems-manager-vendors.yml
+- type: SDKs
+  url: packages/amazon-systems-manager-packages.yml
+- type: Packages
+  url: packages/amazon-systems-manager-packages.yml
+- type: Security
+  url: https://aws.amazon.com/security/?nc2=h_dsc_aa_sec
+- type: Newsroom
+  url: https://aws.amazon.com/media/?nc2=h_sol_ind_med
+- type: Authentication
+  url: authentication/amazon-systems-manager-authentication.yml
+- type: Plans
+  url: plans/amazon-systems-manager-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/amazon-systems-manager-rate-limits.yml
+- type: FinOps
+  url: finops/amazon-systems-manager-finops.yml
+- type: CapabilityMap
+  url: capabilities/amazon-systems-manager-capability-edges.yml
+  name: Amazon Systems Manager Business Capability Map
+- type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/amazon-systems-manager/overview
+- type: AgenticAccess
+  url: agentic-access/amazon-systems-manager-agentic-access.yml
+- type: TrustCenter
+  url: security/amazon-systems-manager-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/amazon-systems-manager-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/amazon-systems-manager-domain-security.yml
+- type: Portal
+  url: https://aws.amazon.com/
+- type: Website
+  url: https://aws.amazon.com/systems-manager/
+- type: Documentation
+  url: https://docs.aws.amazon.com/systems-manager/
+- type: TermsOfService
+  url: https://aws.amazon.com/service-terms/
+- type: PrivacyPolicy
+  url: https://aws.amazon.com/privacy/
+- type: Support
+  url: https://aws.amazon.com/premiumsupport/
+- type: GitHubOrganization
+  url: https://github.com/aws
+- type: Console
+  url: https://console.aws.amazon.com/systems-manager/
+- type: Signup
+  url: https://signin.aws.amazon.com/signup?request_type=register
+- type: Login
+  url: https://aws.amazon.com/console/
+- type: StatusPage
+  url: https://health.aws.amazon.com/health/status
+- type: Contact
+  url: https://aws.amazon.com/contact-us/
+- type: Features
+  data:
+  - name: Automation
+    description: Automate operational tasks with Amazon Systems Manager.
+  - name: API Access
+    description: Programmatic access to Amazon Systems Manager resources.
+- type: UseCases
+  data:
+  - name: Cloud Operations
+    description: Use Amazon Systems Manager to manage and automate cloud operations.
+- type: UsageTerms
+  url: terms/amazon-systems-manager-terms-of-service.yml
+- type: DataProcessing
+  url: privacy/amazon-systems-manager-privacy-policy.yml
+- type: Attestations
+  url: compliance/amazon-systems-manager-compliance.yml
+- type: AIPreferences
+  url: ai-preferences/amazon-systems-manager-ai-preferences.yml
 apis:
 - aid: amazon-systems-manager:amazon-systems-manager-automation-api
   name: Amazon Systems Manager Automation API
@@ -52,6 +178,10 @@ apis:
     url: https://aws.amazon.com/systems-manager/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/systems-manager/faq/
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-start-automation-execution-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-start-automation-execution-result-schema.json
 - aid: amazon-systems-manager:amazon-systems-manager-documents-api
   name: Amazon Systems Manager Documents API
   description: Operations for managing SSM documents.
@@ -70,12 +200,26 @@ apis:
     url: https://aws.amazon.com/systems-manager/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/systems-manager/faq/
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-create-document-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-document-result-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-update-document-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-list-documents-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-delete-document-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-document-request-schema.json
 - aid: amazon-systems-manager:amazon-systems-manager-managed-instances-api
   name: Amazon Systems Manager Managed Instances API
   description: Operations for managing instance information.
   humanURL: https://aws.amazon.com/systems-manager/
   baseURL: https://ssm.amazonaws.com
   tags:
+  - ManagedInstances
+  tags_raw:
   - Managed Instances
   properties:
   - type: OpenAPI
@@ -88,6 +232,14 @@ apis:
     url: https://aws.amazon.com/systems-manager/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/systems-manager/faq/
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-describe-instance-information-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-describe-instance-information-result-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-deregister-managed-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-deregister-managed-instance-result-schema.json
 - aid: amazon-systems-manager:amazon-systems-manager-parameter-store-api
   name: Amazon Systems Manager Parameter Store API
   description: Operations for managing parameters.
@@ -106,6 +258,14 @@ apis:
     url: https://aws.amazon.com/systems-manager/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/systems-manager/faq/
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-put-parameter-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-parameter-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-put-parameter-result-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-parameter-result-schema.json
 - aid: amazon-systems-manager:amazon-systems-manager-run-command-api
   name: Amazon Systems Manager Run Command API
   description: Operations for running commands on managed instances.
@@ -124,11 +284,17 @@ apis:
     url: https://aws.amazon.com/systems-manager/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/systems-manager/faq/
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-send-command-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-list-commands-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-list-commands-result-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-send-command-result-schema.json
 - aid: amazon-systems-manager:amazon-systems-manager-activation-api
   name: Amazon Systems Manager Systems Manager Activation API
-  description: >-
-    The Systems Manager Activation API from Amazon Systems Manager — 3 operation(s) for systems manager
-    activation.
+  description: The Systems Manager Activation API from Amazon Systems Manager — 3 operation(s) for systems manager activation.
   humanURL: https://aws.amazon.com/systems-manager/
   baseURL: https://ssm.amazonaws.com
   tags:
@@ -136,11 +302,21 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-systems-manager-activation-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-create-activation-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-describe-activations-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-create-activation-result-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-describe-activations-result-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-delete-activation-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-delete-activation-result-schema.json
 - aid: amazon-systems-manager:amazon-systems-manager-association-api
   name: Amazon Systems Manager Systems Manager Association API
-  description: >-
-    The Systems Manager Association API from Amazon Systems Manager — 5 operation(s) for systems manager
-    association.
+  description: The Systems Manager Association API from Amazon Systems Manager — 5 operation(s) for systems manager association.
   humanURL: https://aws.amazon.com/systems-manager/
   baseURL: https://ssm.amazonaws.com
   tags:
@@ -148,11 +324,21 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-systems-manager-association-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-create-association-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-update-association-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-list-associations-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-delete-association-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-describe-association-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-list-associations-result-schema.json
 - aid: amazon-systems-manager:amazon-systems-manager-automation-execution-api
   name: Amazon Systems Manager Systems Manager Automation Execution API
-  description: >-
-    The Systems Manager Automation Execution API from Amazon Systems Manager — 3 operation(s) for systems
-    manager automation execution.
+  description: The Systems Manager Automation Execution API from Amazon Systems Manager — 3 operation(s) for systems manager automation execution.
   humanURL: https://aws.amazon.com/systems-manager/
   baseURL: https://ssm.amazonaws.com
   tags:
@@ -160,11 +346,21 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-systems-manager-automation-execution-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-start-automation-execution-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-describe-automation-executions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-describe-automation-executions-result-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-stop-automation-execution-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-automation-execution-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-start-automation-execution-result-schema.json
 - aid: amazon-systems-manager:amazon-systems-manager-cloud-connector-api
   name: Amazon Systems Manager Systems Manager Cloud Connector API
-  description: >-
-    The Systems Manager Cloud Connector API from Amazon Systems Manager — 6 operation(s) for systems manager
-    cloud connector.
+  description: The Systems Manager Cloud Connector API from Amazon Systems Manager — 6 operation(s) for systems manager cloud connector.
   humanURL: https://aws.amazon.com/systems-manager/
   baseURL: https://ssm.amazonaws.com
   tags:
@@ -172,11 +368,21 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-systems-manager-cloud-connector-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-create-cloud-connector-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-cloud-connector-result-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-list-cloud-connectors-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-update-cloud-connector-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-validate-cloud-connector-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-validate-cloud-connector-result-schema.json
 - aid: amazon-systems-manager:amazon-systems-manager-inventory-api
   name: Amazon Systems Manager Systems Manager Inventory API
-  description: >-
-    The Systems Manager Inventory API from Amazon Systems Manager — 3 operation(s) for systems manager
-    inventory.
+  description: The Systems Manager Inventory API from Amazon Systems Manager — 3 operation(s) for systems manager inventory.
   humanURL: https://aws.amazon.com/systems-manager/
   baseURL: https://ssm.amazonaws.com
   tags:
@@ -184,11 +390,21 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-systems-manager-inventory-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-delete-inventory-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-inventory-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-delete-inventory-result-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-inventory-result-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-put-inventory-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-put-inventory-result-schema.json
 - aid: amazon-systems-manager:amazon-systems-manager-maintenance-window-api
   name: Amazon Systems Manager Systems Manager Maintenance Window API
-  description: >-
-    The Systems Manager Maintenance Window API from Amazon Systems Manager — 6 operation(s) for systems
-    manager maintenance window.
+  description: The Systems Manager Maintenance Window API from Amazon Systems Manager — 6 operation(s) for systems manager maintenance window.
   humanURL: https://aws.amazon.com/systems-manager/
   baseURL: https://ssm.amazonaws.com
   tags:
@@ -196,11 +412,22 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-systems-manager-maintenance-window-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-create-maintenance-window-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-update-maintenance-window-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-maintenance-window-result-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-update-maintenance-window-result-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-describe-maintenance-windows-for-target-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-describe-maintenance-windows-request-schema.json
 - aid: amazon-systems-manager:amazon-systems-manager-maintenance-window-execution-api
   name: Amazon Systems Manager Systems Manager Maintenance Window Execution API
-  description: >-
-    The Systems Manager Maintenance Window Execution API from Amazon Systems Manager — 3 operation(s)
-    for systems manager maintenance window execution.
+  description: The Systems Manager Maintenance Window Execution API from Amazon Systems Manager — 3 operation(s) for systems manager maintenance
+    window execution.
   humanURL: https://aws.amazon.com/systems-manager/
   baseURL: https://ssm.amazonaws.com
   tags:
@@ -208,11 +435,22 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-systems-manager-maintenance-window-execution-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-describe-maintenance-window-executions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-maintenance-window-execution-result-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-describe-maintenance-window-executions-result-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-maintenance-window-execution-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-cancel-maintenance-window-execution-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-cancel-maintenance-window-execution-result-schema.json
 - aid: amazon-systems-manager:amazon-systems-manager-maintenance-window-task-api
   name: Amazon Systems Manager Systems Manager Maintenance Window Task API
-  description: >-
-    The Systems Manager Maintenance Window Task API from Amazon Systems Manager — 3 operation(s) for systems
-    manager maintenance window task.
+  description: The Systems Manager Maintenance Window Task API from Amazon Systems Manager — 3 operation(s) for systems manager maintenance window
+    task.
   humanURL: https://aws.amazon.com/systems-manager/
   baseURL: https://ssm.amazonaws.com
   tags:
@@ -220,11 +458,21 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-systems-manager-maintenance-window-task-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-update-maintenance-window-task-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-maintenance-window-task-result-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-update-maintenance-window-task-result-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-describe-maintenance-window-tasks-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-describe-maintenance-window-tasks-result-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-maintenance-window-task-request-schema.json
 - aid: amazon-systems-manager:amazon-systems-manager-operations-api
   name: Amazon Systems Manager Systems Manager Operations API
-  description: >-
-    The Systems Manager Operations API from Amazon Systems Manager — 68 operation(s) for systems manager
-    operations.
+  description: The Systems Manager Operations API from Amazon Systems Manager — 68 operation(s) for systems manager operations.
   humanURL: https://aws.amazon.com/systems-manager/
   baseURL: https://ssm.amazonaws.com
   tags:
@@ -232,11 +480,21 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-systems-manager-operations-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-register-task-with-maintenance-window-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-command-invocation-result-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-describe-patch-group-state-result-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-start-change-request-execution-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-maintenance-window-execution-task-result-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-put-compliance-items-request-schema.json
 - aid: amazon-systems-manager:amazon-systems-manager-ops-item-api
   name: Amazon Systems Manager Systems Manager Ops Item API
-  description: >-
-    The Systems Manager Ops Item API from Amazon Systems Manager — 5 operation(s) for systems manager
-    ops item.
+  description: The Systems Manager Ops Item API from Amazon Systems Manager — 5 operation(s) for systems manager ops item.
   humanURL: https://aws.amazon.com/systems-manager/
   baseURL: https://ssm.amazonaws.com
   tags:
@@ -244,11 +502,22 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-systems-manager-ops-item-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-create-ops-item-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-update-ops-item-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-describe-ops-items-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-describe-ops-items-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-ops-item-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-create-ops-item-response-schema.json
 - aid: amazon-systems-manager:amazon-systems-manager-ops-item-related-item-api
   name: Amazon Systems Manager Systems Manager Ops Item Related Item API
-  description: >-
-    The Systems Manager Ops Item Related Item API from Amazon Systems Manager — 3 operation(s) for systems
-    manager ops item related item.
+  description: The Systems Manager Ops Item Related Item API from Amazon Systems Manager — 3 operation(s) for systems manager ops item related
+    item.
   humanURL: https://aws.amazon.com/systems-manager/
   baseURL: https://ssm.amazonaws.com
   tags:
@@ -256,11 +525,21 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-systems-manager-ops-item-related-item-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-associate-ops-item-related-item-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-list-ops-item-related-items-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-disassociate-ops-item-related-item-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-list-ops-item-related-items-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-associate-ops-item-related-item-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-disassociate-ops-item-related-item-response-schema.json
 - aid: amazon-systems-manager:amazon-systems-manager-ops-metadata-api
   name: Amazon Systems Manager Systems Manager Ops Metadata API
-  description: >-
-    The Systems Manager Ops Metadata API from Amazon Systems Manager — 5 operation(s) for systems manager
-    ops metadata.
+  description: The Systems Manager Ops Metadata API from Amazon Systems Manager — 5 operation(s) for systems manager ops metadata.
   humanURL: https://aws.amazon.com/systems-manager/
   baseURL: https://ssm.amazonaws.com
   tags:
@@ -268,11 +547,21 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-systems-manager-ops-metadata-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-create-ops-metadata-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-list-ops-metadata-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-ops-metadata-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-update-ops-metadata-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-ops-metadata-result-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-list-ops-metadata-result-schema.json
 - aid: amazon-systems-manager:amazon-systems-manager-parameter-api
   name: Amazon Systems Manager Systems Manager Parameter API
-  description: >-
-    The Systems Manager Parameter API from Amazon Systems Manager — 5 operation(s) for systems manager
-    parameter.
+  description: The Systems Manager Parameter API from Amazon Systems Manager — 5 operation(s) for systems manager parameter.
   humanURL: https://aws.amazon.com/systems-manager/
   baseURL: https://ssm.amazonaws.com
   tags:
@@ -280,11 +569,21 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-systems-manager-parameter-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-put-parameter-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-parameters-by-path-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-describe-parameters-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-parameters-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-parameter-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-put-parameter-result-schema.json
 - aid: amazon-systems-manager:amazon-systems-manager-patch-baseline-api
   name: Amazon Systems Manager Systems Manager Patch Baseline API
-  description: >-
-    The Systems Manager Patch Baseline API from Amazon Systems Manager — 8 operation(s) for systems manager
-    patch baseline.
+  description: The Systems Manager Patch Baseline API from Amazon Systems Manager — 8 operation(s) for systems manager patch baseline.
   humanURL: https://aws.amazon.com/systems-manager/
   baseURL: https://ssm.amazonaws.com
   tags:
@@ -292,11 +591,21 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-systems-manager-patch-baseline-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-create-patch-baseline-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-update-patch-baseline-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-patch-baseline-result-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-update-patch-baseline-result-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-describe-patch-baselines-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-patch-baseline-for-patch-group-result-schema.json
 - aid: amazon-systems-manager:amazon-systems-manager-resource-data-sync-api
   name: Amazon Systems Manager Systems Manager Resource Data Sync API
-  description: >-
-    The Systems Manager Resource Data Sync API from Amazon Systems Manager — 4 operation(s) for systems
-    manager resource data sync.
+  description: The Systems Manager Resource Data Sync API from Amazon Systems Manager — 4 operation(s) for systems manager resource data sync.
   humanURL: https://aws.amazon.com/systems-manager/
   baseURL: https://ssm.amazonaws.com
   tags:
@@ -304,11 +613,21 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-systems-manager-resource-data-sync-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-create-resource-data-sync-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-list-resource-data-sync-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-update-resource-data-sync-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-list-resource-data-sync-result-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-delete-resource-data-sync-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-create-resource-data-sync-result-schema.json
 - aid: amazon-systems-manager:amazon-systems-manager-resource-policy-api
   name: Amazon Systems Manager Systems Manager Resource Policy API
-  description: >-
-    The Systems Manager Resource Policy API from Amazon Systems Manager — 3 operation(s) for systems manager
-    resource policy.
+  description: The Systems Manager Resource Policy API from Amazon Systems Manager — 3 operation(s) for systems manager resource policy.
   humanURL: https://aws.amazon.com/systems-manager/
   baseURL: https://ssm.amazonaws.com
   tags:
@@ -316,11 +635,21 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-systems-manager-resource-policy-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-delete-resource-policy-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-put-resource-policy-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-resource-policies-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-resource-policies-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-put-resource-policy-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-delete-resource-policy-response-schema.json
 - aid: amazon-systems-manager:amazon-systems-manager-service-setting-api
   name: Amazon Systems Manager Systems Manager Service Setting API
-  description: >-
-    The Systems Manager Service Setting API from Amazon Systems Manager — 3 operation(s) for systems manager
-    service setting.
+  description: The Systems Manager Service Setting API from Amazon Systems Manager — 3 operation(s) for systems manager service setting.
   humanURL: https://aws.amazon.com/systems-manager/
   baseURL: https://ssm.amazonaws.com
   tags:
@@ -328,10 +657,21 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-systems-manager-service-setting-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-update-service-setting-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-reset-service-setting-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-service-setting-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-update-service-settings-input-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-service-settings-output-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-service-setting-result-schema.json
 - aid: amazon-systems-manager:amazon-systems-manager-tag-api
   name: Amazon Systems Manager Systems Manager Tag API
-  description: >-
-    The Systems Manager Tag API from Amazon Systems Manager — 3 operation(s) for systems manager tag.
+  description: The Systems Manager Tag API from Amazon Systems Manager — 3 operation(s) for systems manager tag.
   humanURL: https://aws.amazon.com/systems-manager/
   baseURL: https://ssm.amazonaws.com
   tags:
@@ -339,78 +679,257 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-systems-manager-tag-api-openapi.yml
-common:
-  - type: Plans
-    url: plans/amazon-systems-manager-plans-pricing.yml
-  - type: RateLimits
-    url: rate-limits/amazon-systems-manager-rate-limits.yml
-  - type: FinOps
-    url: finops/amazon-systems-manager-finops.yml
-  - type: CapabilityMap
-    url: capabilities/amazon-systems-manager-capability-edges.yml
-    name: Amazon Systems Manager Business Capability Map
-  - type: PostmanWorkspace
-    url: https://www.postman.com/kinlaneapi/amazon-systems-manager/overview
-  - type: AgenticAccess
-    url: agentic-access/amazon-systems-manager-agentic-access.yml
-  - type: TrustCenter
-    url: security/amazon-systems-manager-trust-center.yml
-  - type: VulnerabilityDisclosure
-    url: security/amazon-systems-manager-vulnerability-disclosure.yml
-  - type: DomainSecurity
-    url: security/amazon-systems-manager-domain-security.yml
-  - type: Portal
-    url: https://aws.amazon.com/
-  - type: Website
-    url: https://aws.amazon.com/systems-manager/
-  - type: Documentation
-    url: https://docs.aws.amazon.com/systems-manager/
-  - type: TermsOfService
-    url: https://aws.amazon.com/service-terms/
-  - type: PrivacyPolicy
-    url: https://aws.amazon.com/privacy/
-  - type: Support
-    url: https://aws.amazon.com/premiumsupport/
-  - type: GitHubOrganization
-    url: https://github.com/aws
-  - type: Console
-    url: https://console.aws.amazon.com/systems-manager/
-  - type: Signup
-    url: https://signin.aws.amazon.com/signup?request_type=register
-  - type: Login
-    url: https://aws.amazon.com/console/
-  - type: StatusPage
-    url: https://health.aws.amazon.com/health/status
-  - type: Contact
-    url: https://aws.amazon.com/contact-us/
-  - type: SpectralRules
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/amazon-systems-manager/refs/heads/main/rules/amazon-systems-manager-spectral-rules.yml
-  - type: Vocabulary
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/amazon-systems-manager/refs/heads/main/vocabulary/amazon-systems-manager-vocabulary.yaml
-  - type: Features
-    data:
-      - name: Automation
-        description: Automate operational tasks with Amazon Systems Manager.
-      - name: API Access
-        description: Programmatic access to Amazon Systems Manager resources.
-  - type: UseCases
-    data:
-      - name: Cloud Operations
-        description: Use Amazon Systems Manager to manage and automate cloud operations.
-maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
-    url: https://apievangelist.com
-tags:
-  - Automation
-  - Amazon Web Services
-  - Management
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-add-tags-to-resource-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-remove-tags-from-resource-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-list-tags-for-resource-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-appconfig-tag-resource-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-untag-resource-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-tag-resource-input-schema.json
+- aid: amazon-systems-manager:amazon-systems-manager-applications-api
+  name: Amazon Systems Manager Systems Manager Applications API
+  description: The Systems Manager Applications API from Amazon Systems Manager — 2 operation(s) for systems manager applications.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Systems Manager Applications
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-applications-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-list-applications-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-create-application-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-applications-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-update-application-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-appconfig-application-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-application-request-schema.json
+- aid: amazon-systems-manager:amazon-systems-manager-configurationmanager-api
+  name: Amazon Systems Manager Systems Manager Configurationmanager API
+  description: The Systems Manager Configurationmanager API from Amazon Systems Manager — 2 operation(s) for systems manager configurationmanager.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Systems Manager Configurationmanager
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-configurationmanager-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-configuration-manager-output-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-create-configuration-manager-input-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-update-configuration-manager-input-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-create-configuration-manager-output-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-configuration-manager-input-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-delete-configuration-manager-input-schema.json
+- aid: amazon-systems-manager:amazon-systems-manager-configurationprofiles-api
+  name: Amazon Systems Manager Systems Manager Configurationprofiles API
+  description: The Systems Manager Configurationprofiles API from Amazon Systems Manager — 2 operation(s) for systems manager configurationprofiles.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Systems Manager Configurationprofiles
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-configurationprofiles-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-create-configuration-profile-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-configuration-profile-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-update-configuration-profile-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-delete-configuration-profile-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-list-configuration-profiles-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-configuration-profile-request-schema.json
+- aid: amazon-systems-manager:amazon-systems-manager-deployments-api
+  name: Amazon Systems Manager Systems Manager Deployments API
+  description: The Systems Manager Deployments API from Amazon Systems Manager — 2 operation(s) for systems manager deployments.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Systems Manager Deployments
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-deployments-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-deployment-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-start-deployment-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-list-deployments-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-stop-deployment-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-deployment-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-deployments-schema.json
+- aid: amazon-systems-manager:amazon-systems-manager-deploymentstrategies-api
+  name: Amazon Systems Manager Systems Manager Deploymentstrategies API
+  description: The Systems Manager Deploymentstrategies API from Amazon Systems Manager — 2 operation(s) for systems manager deploymentstrategies.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Systems Manager Deploymentstrategies
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-deploymentstrategies-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-create-deployment-strategy-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-update-deployment-strategy-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-deployment-strategy-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-list-deployment-strategies-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-deployment-strategies-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-deployment-strategy-request-schema.json
+- aid: amazon-systems-manager:amazon-systems-manager-environments-api
+  name: Amazon Systems Manager Systems Manager Environments API
+  description: The Systems Manager Environments API from Amazon Systems Manager — 2 operation(s) for systems manager environments.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Systems Manager Environments
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-environments-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-delete-environment-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-environment-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-create-environment-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-update-environment-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-list-environments-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-environments-schema.json
+- aid: amazon-systems-manager:amazon-systems-manager-experimentdefinitions-api
+  name: Amazon Systems Manager Systems Manager Experimentdefinitions API
+  description: The Systems Manager Experimentdefinitions API from Amazon Systems Manager — 3 operation(s) for systems manager experimentdefinitions.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Systems Manager Experimentdefinitions
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-experimentdefinitions-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-experiment-definition-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-create-experiment-definition-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-update-experiment-definition-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-list-experiment-definitions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-delete-experiment-definition-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-experiment-definition-request-schema.json
+- aid: amazon-systems-manager:amazon-systems-manager-experimentruns-api
+  name: Amazon Systems Manager Systems Manager Experimentruns API
+  description: The Systems Manager Experimentruns API from Amazon Systems Manager — 2 operation(s) for systems manager experimentruns.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Systems Manager Experimentruns
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-experimentruns-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-experiment-run-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-start-experiment-run-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-list-experiment-runs-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-experiment-run-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-experiment-runs-schema.json
+- aid: amazon-systems-manager:amazon-systems-manager-extensionassociations-api
+  name: Amazon Systems Manager Systems Manager Extensionassociations API
+  description: The Systems Manager Extensionassociations API from Amazon Systems Manager — 2 operation(s) for systems manager extensionassociations.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Systems Manager Extensionassociations
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-extensionassociations-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-create-extension-association-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-list-extension-associations-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-extension-association-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-extension-associations-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-update-extension-association-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-delete-extension-association-request-schema.json
+- aid: amazon-systems-manager:amazon-systems-manager-extensions-api
+  name: Amazon Systems Manager Systems Manager Extensions API
+  description: The Systems Manager Extensions API from Amazon Systems Manager — 2 operation(s) for systems manager extensions.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Systems Manager Extensions
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-extensions-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-create-extension-request-schema.json
+- aid: amazon-systems-manager:amazon-systems-manager-hostedconfigurationversions-api
+  name: Amazon Systems Manager Systems Manager Hostedconfigurationversions API
+  description: The Systems Manager Hostedconfigurationversions API from Amazon Systems Manager — 2 operation(s) for systems manager hostedconfigurationversions.
+  humanURL: https://aws.amazon.com/systems-manager/
+  baseURL: https://ssm.amazonaws.com
+  tags:
+  - Systems Manager Hostedconfigurationversions
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-systems-manager-hostedconfigurationversions-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-create-hosted-configuration-version-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-hosted-configuration-version-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-list-hosted-configuration-versions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-delete-hosted-configuration-version-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-get-hosted-configuration-version-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-systems-manager-hosted-configuration-versions-schema.json
 tags_raw:
-  - Automation
-  - AWS
-  - Management
-  - Operations
+- Automation
+- AWS
+- Management
+- Operations
 x-parent: amazon-web-services
 x-relationship: product
+x-enrichment:
+  date: '2026-11-11'
+  status: enriched
+  artifacts_added: 8
+  pass: local-v6
